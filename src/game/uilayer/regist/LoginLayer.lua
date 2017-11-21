@@ -71,6 +71,7 @@ function LoginLayer:ctor()
 			self:requestServerList(function()
 				--anysdk登录
 				local download_channel = g_Account.getDownloadChannel()
+                print("download_channel",download_channel)
 				if download_channel == g_sdkManager.SdkDownLoadChannel.anysdk then
 						local pluginChannel = require("anysdk.PluginChannel"):getInstance()
 						if pluginChannel then
@@ -80,6 +81,10 @@ function LoginLayer:ctor()
 						self:doVerfityUid(g_sdkManager.SdkLoginChannel.huawei)
 				elseif download_channel == g_sdkManager.SdkDownLoadChannel.aligames then
 						self:doVerfityUid(g_sdkManager.SdkLoginChannel.aligames)
+				elseif download_channel == g_sdkManager.SdkDownLoadChannel.qiangwan then
+						self:doVerfityUid(g_sdkManager.SdkLoginChannel.qiangwan)
+				elseif download_channel == g_sdkManager.SdkDownLoadChannel.haowan then
+						self:doVerfityUid(g_sdkManager.SdkLoginChannel.haowan)						
 				end
 							
 			end)
@@ -257,7 +262,7 @@ function LoginLayer:ctor()
 	end)
 	
 	self._baseNode:getChildByName("btn_login"):addClickEventListener(function(sender)
-			self:doEnterGameHandler()
+        self:doEnterGameHandler()
 	end)
 	
 	self._btnAccountManager:getChildByName("Text"):setString(g_tr("accountManager"))
@@ -341,6 +346,17 @@ function LoginLayer:doEnterGameHandler()
 	elseif download_channel == "aligames" then
 		if g_Account.getUserPlatformUid() == "" then
 			self:doVerfityUid(g_sdkManager.SdkLoginChannel.aligames)
+			return
+		end
+	elseif download_channel == "qiangwan" then
+		if g_Account.getUserPlatformUid() == "" then
+			self:doVerfityUid(g_sdkManager.SdkLoginChannel.qiangwan)
+			return
+		end
+
+	elseif download_channel == "haowan" then
+		if g_Account.getUserPlatformUid() == "" then
+			self:doVerfityUid(g_sdkManager.SdkLoginChannel.haowan)
 			return
 		end
 	end
@@ -533,6 +549,7 @@ end
 function LoginLayer:doVerfityUid(channel)
 	assert(channel)
 	local resultHandler = function(result,dataTable)
+		dump(dataTable)
 		--{"status":"success","uid":1234,”message”:”获得用户信息成功”,"channel":"dsuc"}
 		if result then
 			if dataTable.status == "success" then
@@ -562,7 +579,10 @@ function LoginLayer:changeBtnStatus(isLogin)
 		local download_channel = g_Account.getDownloadChannel()
 		if download_channel == g_sdkManager.SdkDownLoadChannel.anysdk 
 		or download_channel == g_sdkManager.SdkDownLoadChannel.huawei
-		or download_channel == g_sdkManager.SdkDownLoadChannel.aligames then
+		or download_channel == g_sdkManager.SdkDownLoadChannel.aligames 
+		or download_channel == g_sdkManager.SdkDownLoadChannel.qiangwan 
+		or download_channel == g_sdkManager.SdkDownLoadChannel.haowan 
+		then
 			self._baseNode:getChildByName("no_login"):setVisible(false)
 			self._baseNode:getChildByName("btn_login"):setVisible(true)
 			self._btnAccountManager:setVisible(false)
@@ -578,7 +598,10 @@ function LoginLayer:onClickAccountManagerHandler()
 		local download_channel = g_Account.getDownloadChannel()
 		if download_channel == g_sdkManager.SdkDownLoadChannel.anysdk 
 		or download_channel == g_sdkManager.SdkDownLoadChannel.huawei 
-		or download_channel == g_sdkManager.SdkDownLoadChannel.aligames then
+		or download_channel == g_sdkManager.SdkDownLoadChannel.aligames 
+		or download_channel == g_sdkManager.SdkDownLoadChannel.qiangwan 
+		or download_channel == g_sdkManager.SdkDownLoadChannel.haowan 
+		then
 			return
 		end
 	end
@@ -675,7 +698,10 @@ function LoginLayer:updateView()
 		local download_channel = g_Account.getDownloadChannel()
 		if download_channel == g_sdkManager.SdkDownLoadChannel.anysdk 
 		or download_channel == g_sdkManager.SdkDownLoadChannel.huawei 
-		or download_channel == g_sdkManager.SdkDownLoadChannel.aligames then
+		or download_channel == g_sdkManager.SdkDownLoadChannel.aligames 
+		or download_channel == g_sdkManager.SdkDownLoadChannel.qiangwan
+		or download_channel == g_sdkManager.SdkDownLoadChannel.haowan
+		then
 			self:changeBtnStatus(true)
 		end
 	end

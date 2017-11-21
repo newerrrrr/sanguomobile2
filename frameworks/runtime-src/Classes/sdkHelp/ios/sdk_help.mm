@@ -5,7 +5,9 @@
 #import <FBSDKShareKit/FBSDKShareLinkContent.h>
 #import <AppsFlyer/AppsFlyer.h>
 #import <Foundation/Foundation.h>
-#import "ReYunTrack.h"
+#import <YLSDK/YLSDK.h>
+//#import "ReYunTrack.h"
+#import "AppController.h"
 
 #include "cocos2d.h"
 #include "CCLuaEngine.h"
@@ -17,7 +19,6 @@ using namespace cocos2d;
 @implementation SdkHelp
 
 static SdkHelp* s_instance = nil;
-
 
 + (SdkHelp*) getInstance
 {
@@ -154,7 +155,7 @@ static SdkHelp* s_instance = nil;
                  statusStr = @"success";
                  tokenStr = result.token.userID;//facebook use userid
              }
- 
+             
              stack->pushString([statusStr cStringUsingEncoding:NSASCIIStringEncoding]);
              stack->pushString([tokenStr cStringUsingEncoding:NSASCIIStringEncoding]);
              stack->executeFunction(2);
@@ -163,6 +164,111 @@ static SdkHelp* s_instance = nil;
      
      }];
 }
+
+//qw login
++(void) loginQWToLua:(NSDictionary *)dict tokenStr:(NSString *)token uidStr:(NSString *)uid
+{
+    [[SdkHelp getInstance] setScriptHandler:[[dict objectForKey:@"scriptHandler"] intValue]];
+    //[AppController loginQW];
+    int scriptHandler = [[SdkHelp getInstance] getScriptHandler];
+    if (scriptHandler){
+        LuaBridge::pushLuaFunctionById(scriptHandler);
+        LuaStack *stack = LuaBridge::getStack();
+        stack->pushString([token cStringUsingEncoding:NSASCIIStringEncoding]);
+        stack->pushString([uid cStringUsingEncoding:NSASCIIStringEncoding]);
+        stack->executeFunction(2);
+        
+        //NSLog(@"this is qw scriptHandler");
+    }
+    //NSLog(@"this is qw login");
+}
+
++(void) logoutQWToLua:(NSDictionary *)dict{
+    [[SdkHelp getInstance] setScriptHandler:[[dict objectForKey:@"testHandler"] intValue]];
+    int scriptHandler = [[SdkHelp getInstance] getScriptHandler];
+    if(scriptHandler){
+        LuaBridge::pushLuaFunctionById(scriptHandler);
+        LuaStack *stack = LuaBridge::getStack();
+        stack->pushString([@"this is test" cStringUsingEncoding:NSASCIIStringEncoding]);
+        stack->executeFunction(1);
+    }
+    
+}
+
+//haowan login
++(void) loginHWToLua:(NSDictionary *)dict tokenStr:(NSString *)token uidStr:(NSString *)uid
+{
+    [[SdkHelp getInstance] setScriptHandler:[[dict objectForKey:@"scriptHandler"] intValue]];
+    int scriptHandler = [[SdkHelp getInstance] getScriptHandler];
+    if (scriptHandler){
+        LuaBridge::pushLuaFunctionById(scriptHandler);
+        LuaStack *stack = LuaBridge::getStack();
+        stack->pushString([token cStringUsingEncoding:NSASCIIStringEncoding]);
+        stack->pushString([uid cStringUsingEncoding:NSASCIIStringEncoding]);
+        stack->executeFunction(2);
+        
+        //NSLog(@"this is hw scriptHandler");
+    }
+    //NSLog(@"this is hw login");
+}
+
++(void) logoutHWToLua:(NSDictionary *)dict{
+    [[SdkHelp getInstance] setScriptHandler:[[dict objectForKey:@"testHandler"] intValue]];
+    int scriptHandler = [[SdkHelp getInstance] getScriptHandler];
+    if(scriptHandler){
+        LuaBridge::pushLuaFunctionById(scriptHandler);
+        LuaStack *stack = LuaBridge::getStack();
+        stack->pushString([@"this is test" cStringUsingEncoding:NSASCIIStringEncoding]);
+        stack->executeFunction(1);
+    }
+    
+}
+
++(void)payAction:(NSDictionary *)dict{
+    
+    NSString *goodsName = [dict objectForKey:@"goodsName"];
+    NSString *goodsPrice = [dict objectForKey:@"goodsPrice"];
+    NSString *goodsDesc = [dict objectForKey:@"goodsDesc"];
+    NSString *extendInfo = [dict objectForKey:@"extendInfo"];
+    NSString *productId = [dict objectForKey:@"productId"];
+    NSString *player_server = [dict objectForKey:@"player_server"];
+    NSString *player_role = [dict objectForKey:@"player_role"];
+    NSString *cp_trade_no = [dict objectForKey:@"cp_trade_no"];
+    
+    NSLog(@"goodsName:%@"    ,goodsName);
+    NSLog(@"goodsPrice:%@"   ,goodsPrice);
+    NSLog(@"goodsDesc:%@"    ,goodsDesc);
+    NSLog(@"extendInfo:%@"   ,extendInfo);
+    NSLog(@"productId:%@"    ,productId);
+    NSLog(@"player_server:%@",player_server);
+    NSLog(@"player_role:%@"  ,player_role);
+    NSLog(@"cp_trade_no:%@"  ,cp_trade_no);
+    
+    OrderInfo *orderInfo = [[OrderInfo alloc] init];
+    orderInfo.goodsName = goodsName;
+    orderInfo.goodsPrice = [goodsPrice intValue];
+    //[goodsPrice intValue];//单位为分
+    orderInfo.goodsDesc = goodsDesc;//商品描述
+    orderInfo.extendInfo = extendInfo;
+    //extendInfo;//此字段会透传到游戏服务器，可拼接订单信息和其它信息等
+    orderInfo.productId = productId;//虚拟商品在APP Store中的ID
+    //-------注意：此处需要传入的是区服的名称，而不是区服编号-------------------------
+    orderInfo.player_server = player_server;//玩家所在区服名称（跟游戏内显示的区服保持一致）
+    orderInfo.player_role = player_role;// 玩家角色名称
+    orderInfo.cp_trade_no = cp_trade_no;//CP订单号
+    
+    [[YLApi YL_sharedInstance] YL_pay:orderInfo completionBlock:^(NSDictionary *resultDic) {
+        NSLog(@"[pay] resultDic = %@", resultDic);
+        NSNumber *payresult = [resultDic objectForKey:@"payresult"];
+        if ([payresult intValue] == YLTreatedOrderSuccess) {
+            NSLog(@"支付成功");
+            //**************为了减少漏单几率，不要在这个回调里面处理加钻逻辑，支付成功我们服务************
+            //**************器会通知cp服务器，cp服务器收到通知以后客户端再进行加钻。************
+        }
+    }];
+}
+
+
 
 - (void)sharer:(id<FBSDKSharing>)sharer didCompleteWithResults:(NSDictionary *)results
 {
@@ -219,7 +325,7 @@ static SdkHelp* s_instance = nil;
 
 }
 
-//reyun in app track
+/*reyun in app track
 + (void) trackLoginEventReyun:(NSDictionary *)dict
 {
     NSString *accountId = [dict objectForKey:@"account_id"];
@@ -258,8 +364,7 @@ static SdkHelp* s_instance = nil;
 {
     [ReYunChannel setEvent:@"event_1"];
 }
-
-
+*/
 
 
 //appsflyer in app track
@@ -420,7 +525,6 @@ static SdkHelp* s_instance = nil;
     }
     return ret;
 }
-
 
 
 - (id)init

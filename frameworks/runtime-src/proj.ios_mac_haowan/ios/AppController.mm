@@ -390,15 +390,15 @@ static RootViewController *s_rootview;
 -(void)initHW{
     //初始化“抢玩”SDK,传入游戏信息
     GameAppInfo *game = [[GameAppInfo alloc] init];
-    game.gameId = @"53";//应用id
-    game.gameName = @"手机三国BT版";//应用名称
-    game.gameAppId = @"FDEFBF593576BE384";//应用Appid
-    game.promoteId = @"28";//正式（提审）推广id
-    game.promoteAccount = @"1yx-shoujisanguoBT";//正式（提审）推广名称
+    game.gameId = @"492";//应用id
+    game.gameName = @"掠夺三国";//应用名称
+    game.gameAppId = @"BD8EDD83734FBE7C2";//应用Appid
+    game.promoteId = @"2737";//正式（提审）推广id
+    game.promoteAccount = @"QW0489";//正式（提审）推广名称
     game.is_test = @"1";//是否测试，0 正式（提审）版 |  1 测试版
     //------------此处trackKey要替换为相应的热云key----------------------------------
     //------------创建角色调用[[YLApi YL_sharedInstance] YL_createRoleSuccess]方法-------------------
-    [[YLApi YL_sharedInstance] YL_setYLApiWithInfo:game trackKey:@"dee3937c07605e29635cefea69d1329f" completion:^(NSDictionary *resultDic) {
+    [[YLApi YL_sharedInstance] YL_setYLApiWithInfo:game trackKey:@"0bdfbd8462aeacd50591a70454b8e4ae" completion:^(NSDictionary *resultDic) {
         NSLog(@"[init] resultDic:%@",resultDic);
         NSNumber *statusCode = [resultDic objectForKey:@"statusCode"];
         if ([statusCode intValue] == YLINITSuccess) {

@@ -20,6 +20,8 @@ payWay =
 	["alipay_cn"] = "alipay_cn",
 	["huawei"] = "huawei",
 	["aligames"] = "aligames",
+	["qiangwan"] = "qiangwan",
+	["haowan"] = "haowan",
 }
 
 local payWayList = nil

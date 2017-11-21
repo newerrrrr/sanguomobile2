@@ -17,6 +17,11 @@
 + (void) unregisterAfScriptHandler;
 
 + (void) login:(NSDictionary *)dict;
++ (void) loginQWToLua:(NSDictionary *)dict tokenStr:(NSString *)token uidStr:(NSString *)uid;
++ (void) logoutQWToLua:(NSDictionary *)dict;
++ (void) loginHWToLua:(NSDictionary *)dict tokenStr:(NSString *)token uidStr:(NSString *)uid;
++ (void) logoutHWToLua:(NSDictionary *)dict;
++ (void) payAction:(NSDictionary *)dict;
 + (void) shareToFacebook:(NSDictionary *)dict;
 + (void) trackLoginEvent:(NSDictionary *)dict;
 + (void) trackCreateRoleEvent:(NSDictionary *)dict;
@@ -33,6 +38,8 @@
 + (NSString*) getAppsFlyerUID:(NSDictionary *)dict;
 + (void) getAppsFlyerData:(NSDictionary *)dict;
 + (NSString*) getGetuiClientId:(NSDictionary *)dict;
+
+
 - (id) init;
 
 - (NSString *) jsonStringWithDictionary:(NSDictionary *)dictionary;

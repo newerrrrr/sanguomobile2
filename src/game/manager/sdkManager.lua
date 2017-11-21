@@ -18,6 +18,8 @@ SdkLoginChannel =
 	googleplus = "googleplus",
 	huawei = "huawei",
 	aligames = "aligames",
+	qiangwan = "qiangwan",
+	haowan = "haowan",
 }
 
 SdkDownLoadChannel = {
@@ -31,6 +33,8 @@ SdkDownLoadChannel = {
 	aligames = "aligames",
 	dsuc_cn = "dsuc_cn",
 	taptap = "taptap",
+	qiangwan = "qiangwan",
+	haowan = "haowan",	
 }
 
 
@@ -281,6 +285,41 @@ function login(loginChannel,callback)
 			else
 				print("oc callsuccess")
 			end
+		elseif loginChannel == SdkLoginChannel.qiangwan then
+			print("qiangwan login")
+			local resultHandler = function(token,uid)
+				if callback then
+					callback(uid,token,loginChannel)
+				end
+			end
+
+			local qwLogout = function (  )
+				print("logout")
+				g_gameManager.reStartGame()
+			end
+
+			local args = {scriptHandler = resultHandler,testHandler = qwLogout }
+			local luaoc = require "cocos.cocos2d.luaoc"
+			local className = "AppController"
+			local ok  = luaoc.callStaticMethod(className,"loginQW",args)
+
+		elseif loginChannel == SdkLoginChannel.haowan then
+			print("haowan login")
+			local resultHandler = function(token,uid)
+				if callback then
+					callback(uid,token,loginChannel)
+				end
+			end
+
+			local hwLogout = function (  )
+				print("logout")
+				g_gameManager.reStartGame()
+			end
+
+			local args = {scriptHandler = resultHandler,testHandler = hwLogout }
+			local luaoc = require "cocos.cocos2d.luaoc"
+			local className = "AppController"
+			local ok  = luaoc.callStaticMethod(className,"loginHW",args)			
 		end
 	else
 		printf("%s sdk cannot work @ %s PLATFORM_OS",loginChannel,targetPlatform)

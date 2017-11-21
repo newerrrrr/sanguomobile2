@@ -102,9 +102,94 @@ function sendRequest(msgData, payway,pid)
 		huaweiPay(pid,msgData)
 	elseif payway == g_channelManager.payWay.aligames then
 		aligamesPay(pid,msgData)
+	elseif payway == g_channelManager.payWay.qiangwan then
+		--print("payway is qiangwan")
+		qiangwanPay(pid,msgData)
+
+	elseif payway == g_channelManager.payWay.haowan then
+		--print("payway is haowan")
+		haowanPay(pid,msgData)
+
 	elseif require("anysdk.PluginChannel").isVaildAnySdkChannel(payway) then
 		anysdk(pid,msgData)
 	end
+end
+
+
+function qiangwanPay(pid,msgData)
+	--判断是否是苹果渠道
+	--if (cc.PLATFORM_OS_IPHONE ~= targetPlatform) and (cc.PLATFORM_OS_IPAD ~= targetPlatform) then
+		--g_airBox.show("qiangwan pay valid only on ios")
+		--return
+	--end
+
+	local priceConfig = g_data.pricing[tonumber(pid)]
+	dump(msgData)
+	--dump(priceConfig)
+
+	local productId = priceConfig.product_id
+	if productId == nil or productId == 0 then
+		productId = priceConfig.id
+	end
+
+	local info = 
+	{
+		goodsName = priceConfig.desc1,
+		goodsPrice = tostring( msgData.order.price * 100),
+		goodsDesc = priceConfig.desc1,
+		productId = tostring(productId),
+		extendInfo = tostring(msgData.order.extend),
+		player_server = g_Account.getCurrentAreaInfo().name,
+		player_role = g_PlayerMode.GetData().nick,
+		cp_trade_no = msgData.order.out_trade_no,
+	}
+	
+	dump(info)
+	
+	local luaoc = require "cocos.cocos2d.luaoc"
+	local className = "SdkHelp"
+	local ok  = luaoc.callStaticMethod(className,"payAction",info)
+
+ 	--orderInfo.goodsName = @"金币";
+    --orderInfo.goodsPrice = 1;//单位为分
+    --orderInfo.goodsDesc = @"有了金币就可以买买买了";//商品描述
+    --orderInfo.extendInfo = @"1234567890";//此字段会透传到游戏服务器，可拼接订单信息和其它信息等
+    --orderInfo.productId = @"com.qiangwan.appju_6";//虚拟商品在APP Store中的ID
+    -------注意：此处需要传入的是区服的名称，而不是区服编号-------------------------
+    --orderInfo.player_server = @"素月流天";//玩家所在区服名称（跟游戏内显示的区服保持一致）
+    --orderInfo.player_role = @"小明";// 玩家角色名称
+    --orderInfo.cp_trade_no = @"201603101021";//CP订单号
+
+end
+
+
+function haowanPay(pid,msgData)
+
+	local priceConfig = g_data.pricing[tonumber(pid)]
+	dump(msgData)
+	--dump(priceConfig)
+	local productId = priceConfig.product_id
+	if productId == nil or productId == 0 then
+		productId = priceConfig.id
+	end
+
+	local info = 
+	{
+		goodsName = priceConfig.desc1,
+		goodsPrice = tostring( msgData.order.price * 100),
+		goodsDesc = priceConfig.desc1,
+		productId = tostring(productId),
+		extendInfo = tostring(msgData.order.extend),
+		player_server = g_Account.getCurrentAreaInfo().name,
+		player_role = g_PlayerMode.GetData().nick,
+		cp_trade_no = msgData.order.out_trade_no,
+	}
+	
+	dump(info)
+	
+	local luaoc = require "cocos.cocos2d.luaoc"
+	local className = "SdkHelp"
+	local ok  = luaoc.callStaticMethod(className,"payAction",info) 
 end
 
 function anysdk(pid,msgData)
