@@ -1,0 +1,15 @@
+class httpNet
+{
+	static httpNet * getInstance();
+	static void destroyInstance();
+	
+	void Post(const char * urlString, const char * jsonString, int jsonSize, LUA_FUNCTION funcID, int connectTime, int totalTime, bool useAsync, bool usePack, const char * headString = nullptr, const char * headSplitFlag = nullptr, const char * ssl_path = nullptr);
+	
+	void Post2(const char * urlString, const char * jsonString, int jsonSize, LUA_FUNCTION funcID, int connectTime, int totalTime, bool useAsync, bool usePack, const char * headString = nullptr, const char * headSplitFlag = nullptr, const char * ssl_path = nullptr);
+	
+	void Get(const char * urlString, LUA_FUNCTION funcID, int connectTime = 7, int totalTime = 7, const char * headString = nullptr, const char * headSplitFlag = nullptr, const char * ssl_path = nullptr);
+	
+	void DiscardAllPost();
+	
+	void SetFailedThing(bool var);
+};

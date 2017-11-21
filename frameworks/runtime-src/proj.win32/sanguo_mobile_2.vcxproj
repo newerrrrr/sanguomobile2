@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4E6A7A0E-DDD8-4BAA-8B22-C964069364ED}</ProjectGuid>
+    <ProjectName>sanguo_mobile_2</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0' and exists('$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A')">v120_xp</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0' and exists('$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A')">v140_xp</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0' and exists('$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A')">v120_xp</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0' and exists('$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A')">v140_xp</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\cocos2d-x\cocos\2d\cocos2dx.props" />
+    <Import Project="..\..\cocos2d-x\cocos\2d\cocos2d_headers.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\cocos2d-x\cocos\2d\cocos2dx.props" />
+    <Import Project="..\..\cocos2d-x\cocos\2d\cocos2d_headers.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration).win32\</OutDir>
+    <IntDir>$(Configuration).win32\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <SourcePath>$(SourcePath);</SourcePath>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration).win32\</OutDir>
+    <IntDir>$(Configuration).win32\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LibraryPath>$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\Classes;$(ProjectDir)..\Classes\runtime;$(ProjectDir)..\Classes\protobuf-lite;$(EngineRoot)external\win32-specific\zlib\include;$(EngineRoot)cocos\scripting\lua-bindings\auto;$(EngineRoot)cocos\scripting\lua-bindings\manual;$(EngineRoot)cocos\audio\include;$(EngineRoot)external;$(EngineRoot)external\lua\lua;$(EngineRoot)external\lua\tolua;$(EngineRoot)external\chipmunk\include\chipmunk;$(EngineRoot)external\curl\include\win32;$(EngineRoot)extensions;$(EngineRoot)tools\simulator\libsimulator\lib;$(EngineRoot)tools\simulator\libsimulator\lib\protobuf-lite;$(EngineRoot);%(AdditionalIncludeDirectories);$(_COCOS_HEADER_WIN32_BEGIN);$(_COCOS_HEADER_WIN32_END)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <MinimalRebuild>false</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;STRICT;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS_DEBUG;COCOS2D_DEBUG=1;GLFW_EXPOSE_NATIVE_WIN32;GLFW_EXPOSE_NATIVE_WGL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <ForcedIncludeFiles>algorithm</ForcedIncludeFiles>
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories);$(_COCOS_LIB_PATH_WIN32_BEGIN);$(_COCOS_LIB_PATH_WIN32_END)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libcurl_imp.lib;websockets.lib;%(AdditionalDependencies);$(_COCOS_LIB_WIN32_BEGIN);$(_COCOS_LIB_WIN32_END)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib</IgnoreSpecificDefaultLibraries>
+      <ProgramDatabaseFile>$(ProjectDir)../../../simulator/win32/$(TargetName).pdb</ProgramDatabaseFile>
+      <OutputFile>$(ProjectDir)../../../simulator/win32/$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A\include;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <HeaderFileName>sanguo_mobile_2.h</HeaderFileName>
+      <InterfaceIdentifierFileName>sanguo_mobile_2_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>sanguo_mobile_2_p.c</ProxyFileName>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>$(IntDir)/sanguo_mobile_2.tlb</TypeLibraryName>
+      <DllDataFileName>
+      </DllDataFileName>
+    </Midl>
+    <PreBuildEvent>
+      <Command>xcopy "$(SolutionDir)libforwin32" "$(SolutionDir)$(Configuration).win32" /e /Y /D</Command>
+    </PreBuildEvent>
+    <PreLinkEvent>
+      <Command>
+      </Command>
+    </PreLinkEvent>
+    <PostBuildEvent>
+      <Command>xcopy "$(SolutionDir)libforwin32" "$(ProjectDir)../../../simulator/win32" /e /Y /D
+$(ProjectDir)..\..\..\testplayer\sync.bat</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup>
+    <CustomBuildStep>
+      <Command>if not exist "$(LocalDebuggerWorkingDirectory)" mkdir "$(LocalDebuggerWorkingDirectory)"
+xcopy /Y /Q "$(OutDir)*.dll" "$(LocalDebuggerWorkingDirectory)"
+xcopy /Y /Q "$(ProjectDir)..\Classes\ide-support\lang" "$(LocalDebuggerWorkingDirectory)"
+xcopy "$(ProjectDir)..\..\..\res" "$(LocalDebuggerWorkingDirectory)\res" /D /E /I /F /Y
+xcopy "$(ProjectDir)..\..\..\src" "$(LocalDebuggerWorkingDirectory)\src" /D /E /I /F /Y</Command>
+      <Outputs>$(TargetName).cab</Outputs>
+      <Inputs>$(TargetFileName)</Inputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\Classes;$(EngineRoot)external\win32-specific\zlib\include;$(EngineRoot)cocos\scripting\lua-bindings\auto;$(EngineRoot)cocos\scripting\lua-bindings\manual;$(EngineRoot)cocos\audio\include;$(EngineRoot)external;$(EngineRoot)external\lua\lua;$(EngineRoot)external\lua\tolua;$(EngineRoot)external\chipmunk\include\chipmunk;$(EngineRoot)extensions;$(EngineRoot)external\curl\include\win32;$(EngineRoot);$(EngineRoot)tools\simulator\libsimulator\lib;$(EngineRoot)tools\simulator\libsimulator\lib\protobuf-lite;%(AdditionalIncludeDirectories);$(_COCOS_HEADER_WIN32_BEGIN);$(_COCOS_HEADER_WIN32_END)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;STRICT;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGSNDEBUG;GLFW_EXPOSE_NATIVE_WIN32;GLFW_EXPOSE_NATIVE_WGL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <ForcedIncludeFiles>algorithm</ForcedIncludeFiles>
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories);$(_COCOS_LIB_PATH_WIN32_BEGIN);$(_COCOS_LIB_PATH_WIN32_END)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libcurl_imp.lib;websockets.lib;%(AdditionalDependencies);$(_COCOS_LIB_WIN32_BEGIN);$(_COCOS_LIB_WIN32_END)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A\include;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <HeaderFileName>sanguo_mobile_2.h</HeaderFileName>
+      <InterfaceIdentifierFileName>sanguo_mobile_2_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>sanguo_mobile_2_p.c</ProxyFileName>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>$(IntDir)/sanguo_mobile_2.tlb</TypeLibraryName>
+      <DllDataFileName>
+      </DllDataFileName>
+    </Midl>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreLinkEvent>
+      <Command>
+      </Command>
+    </PreLinkEvent>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Classes\AppDelegate.h" />
+    <ClInclude Include="..\Classes\cJson\fpconv.h" />
+    <ClInclude Include="..\Classes\cJson\lua_cjson.h" />
+    <ClInclude Include="..\Classes\cJson\strbuf.h" />
+    <ClInclude Include="..\Classes\common\Crypto.h" />
+    <ClInclude Include="..\Classes\common\md5.h" />
+    <ClInclude Include="..\Classes\common\PSDeviceInfo.h" />
+    <ClInclude Include="..\Classes\common\PSDeviceInfoLua.h" />
+    <ClInclude Include="..\Classes\common\Sha1.h" />
+    <ClInclude Include="..\Classes\cTools_Control\cTools_Control.h" />
+    <ClInclude Include="..\Classes\cTools_Control\LHSAnimation.h" />
+    <ClInclude Include="..\Classes\cTools_Control\LHSAnimationReturn.h" />
+    <ClInclude Include="..\Classes\cTools_Control\LHSArmature.h" />
+    <ClInclude Include="..\Classes\cTools_Control\LHSArmatureAnimation.h" />
+    <ClInclude Include="..\Classes\cTools_Control\LHSCustomShaderSprite.h" />
+    <ClInclude Include="..\Classes\cTools_Control\LHSDrawNodeToLua.h" />
+    <ClInclude Include="..\Classes\cTools_Control\LHSManualVisit.h" />
+    <ClInclude Include="..\Classes\cTools_Control\LHSOutNotVisit.h" />
+    <ClInclude Include="..\Classes\cTools_Control\LHSRenderTextureToScreen.h" />
+    <ClInclude Include="..\Classes\cTools_Control\LHSRenderTextureToScreenToLua.h" />
+    <ClInclude Include="..\Classes\cTools_Control\LHSSchedulerActionManager.h" />
+    <ClInclude Include="..\Classes\cTools_Control\LHSTmxBaseLayer.h" />
+    <ClInclude Include="..\Classes\cTools_Control\LHSTmxData.h" />
+    <ClInclude Include="..\Classes\cTools_Control\LHSTmxImageLayer.h" />
+    <ClInclude Include="..\Classes\cTools_Control\LHSTmxTileLayer.h" />
+    <ClInclude Include="..\Classes\cTools_Control\LHSTools.h" />
+    <ClInclude Include="..\Classes\cTools_Control\lua_cTools_Control_auto.hpp" />
+    <ClInclude Include="..\Classes\cTools_Control\MapScrollView.h" />
+    <ClInclude Include="..\Classes\cTools_Control\MapScrollViewPerspective.h" />
+    <ClInclude Include="..\Classes\cTools_Control\LHSTmxCache.h" />
+    <ClInclude Include="..\Classes\cTools_Control\LHSTmxLayer.h" />
+    <ClInclude Include="..\Classes\forLua\forLua.h" />
+    <ClInclude Include="..\Classes\forLua\luaBindFunction.h" />
+    <ClInclude Include="..\Classes\forLua\cToolsForLua.h" />
+    <ClInclude Include="..\Classes\gameDelegate\gameDelegate.h" />
+    <ClInclude Include="..\Classes\httpNet\httpNet.h" />
+    <ClInclude Include="..\Classes\ide-support\CodeIDESupport.h" />
+    <ClInclude Include="..\Classes\ide-support\lua_debugger.h" />
+    <ClInclude Include="..\Classes\ide-support\RuntimeLuaImpl.h" />
+    <ClInclude Include="..\Classes\login\UserLogin.h" />
+    <ClInclude Include="..\Classes\md5_tools\md5_tools.h" />
+    <ClInclude Include="..\Classes\payment\paymentForLua.h" />
+    <ClInclude Include="..\Classes\platform\win32\asynchronousBox_Win32.h" />
+    <ClInclude Include="..\Classes\reStartScene\reStartScene.h" />
+    <ClInclude Include="..\Classes\sgHttp\CAutoLock.h" />
+    <ClInclude Include="..\Classes\sgHttp\sgHttp.h" />
+    <ClInclude Include="..\Classes\sgHttp\sgHttpLua.h" />
+    <ClInclude Include="..\Classes\sgNet\CAutoLock.h" />
+    <ClInclude Include="..\Classes\sgNet\NetCommon.h" />
+    <ClInclude Include="..\Classes\sgNet\NetConnectionImpl.h" />
+    <ClInclude Include="..\Classes\sgNet\NetConnetionInterface.h" />
+    <ClInclude Include="..\Classes\sgNet\NetLua.h" />
+    <ClInclude Include="..\Classes\sgNet\NetManager.h" />
+    <ClInclude Include="..\Classes\sgNet\SimpleSocket\ActiveSocket.h" />
+    <ClInclude Include="..\Classes\sgNet\SimpleSocket\Host.h" />
+    <ClInclude Include="..\Classes\sgNet\SimpleSocket\PassiveSocket.h" />
+    <ClInclude Include="..\Classes\sgNet\SimpleSocket\SimpleSocket.h" />
+    <ClInclude Include="..\Classes\sgNet\SimpleSocket\StatTimer.h" />
+    <ClInclude Include="..\Classes\sgNet\Singleton.h" />
+    <ClInclude Include="..\Classes\sgResUpdate\ResUpdateEx.h" />
+    <ClInclude Include="..\Classes\sgResUpdate\ResUpdateExLua.h" />
+    <ClInclude Include="..\Classes\sgResUpdate\sgResUpdate.h" />
+    <ClInclude Include="..\Classes\tiledMap\Tmx.h" />
+    <ClInclude Include="..\Classes\tiledMap\TmxEllipse.h" />
+    <ClInclude Include="..\Classes\tiledMap\TmxImage.h" />
+    <ClInclude Include="..\Classes\tiledMap\TmxImageLayer.h" />
+    <ClInclude Include="..\Classes\tiledMap\TmxLayer.h" />
+    <ClInclude Include="..\Classes\tiledMap\TmxMap.h" />
+    <ClInclude Include="..\Classes\tiledMap\TmxMapTile.h" />
+    <ClInclude Include="..\Classes\tiledMap\TmxObject.h" />
+    <ClInclude Include="..\Classes\tiledMap\TmxObjectGroup.h" />
+    <ClInclude Include="..\Classes\tiledMap\TmxPoint.h" />
+    <ClInclude Include="..\Classes\tiledMap\TmxPolygon.h" />
+    <ClInclude Include="..\Classes\tiledMap\TmxPolyline.h" />
+    <ClInclude Include="..\Classes\tiledMap\TmxPropertySet.h" />
+    <ClInclude Include="..\Classes\tiledMap\TmxTerrain.h" />
+    <ClInclude Include="..\Classes\tiledMap\TmxTerrainArray.h" />
+    <ClInclude Include="..\Classes\tiledMap\TmxTile.h" />
+    <ClInclude Include="..\Classes\tiledMap\TmxTileLayer.h" />
+    <ClInclude Include="..\Classes\tiledMap\TmxTileOffset.h" />
+    <ClInclude Include="..\Classes\tiledMap\TmxTileset.h" />
+    <ClInclude Include="..\Classes\tiledMap\TmxUtil.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="SimulatorWin.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="..\Classes\cJson\fpconv.c" />
+    <ClCompile Include="..\Classes\cJson\lua_cjson.c" />
+    <ClCompile Include="..\Classes\cJson\strbuf.c" />
+    <ClCompile Include="..\Classes\common\Crypto.cpp" />
+    <ClCompile Include="..\Classes\common\md5.cpp" />
+    <ClCompile Include="..\Classes\common\PSDeviceInfo.cpp" />
+    <ClCompile Include="..\Classes\common\PSDeviceInfoLua.cpp" />
+    <ClCompile Include="..\Classes\common\Sha1.cpp" />
+    <ClCompile Include="..\Classes\cTools_Control\LHSAnimation.cpp" />
+    <ClCompile Include="..\Classes\cTools_Control\LHSAnimationReturn.cpp" />
+    <ClCompile Include="..\Classes\cTools_Control\LHSArmature.cpp" />
+    <ClCompile Include="..\Classes\cTools_Control\LHSArmatureAnimation.cpp" />
+    <ClCompile Include="..\Classes\cTools_Control\LHSCustomShaderSprite.cpp" />
+    <ClCompile Include="..\Classes\cTools_Control\LHSDrawNodeToLua.cpp" />
+    <ClCompile Include="..\Classes\cTools_Control\LHSManualVisit.cpp" />
+    <ClCompile Include="..\Classes\cTools_Control\LHSOutNotVisit.cpp" />
+    <ClCompile Include="..\Classes\cTools_Control\LHSRenderTextureToScreen.cpp" />
+    <ClCompile Include="..\Classes\cTools_Control\LHSRenderTextureToScreenToLua.cpp" />
+    <ClCompile Include="..\Classes\cTools_Control\LHSSchedulerActionManager.cpp" />
+    <ClCompile Include="..\Classes\cTools_Control\LHSTmxData.cpp" />
+    <ClCompile Include="..\Classes\cTools_Control\LHSTmxImageLayer.cpp" />
+    <ClCompile Include="..\Classes\cTools_Control\LHSTmxTileLayer.cpp" />
+    <ClCompile Include="..\Classes\cTools_Control\LHSTools.cpp" />
+    <ClCompile Include="..\Classes\cTools_Control\lua_cTools_Control_auto.cpp" />
+    <ClCompile Include="..\Classes\cTools_Control\MapScrollView.cpp" />
+    <ClCompile Include="..\Classes\cTools_Control\MapScrollViewPerspective.cpp" />
+    <ClCompile Include="..\Classes\cTools_Control\LHSTmxCache.cpp" />
+    <ClCompile Include="..\Classes\cTools_Control\LHSTmxLayer.cpp" />
+    <ClCompile Include="..\Classes\forLua\forLua.cpp" />
+    <ClCompile Include="..\Classes\forLua\luaBindFunction.cpp" />
+    <ClCompile Include="..\Classes\forLua\cToolsForLua.cpp" />
+    <ClCompile Include="..\Classes\gameDelegate\gameDelegate.cpp" />
+    <ClCompile Include="..\Classes\httpNet\httpNet.cpp" />
+    <ClCompile Include="..\Classes\ide-support\lua_debugger.c" />
+    <ClCompile Include="..\Classes\ide-support\RuntimeLuaImpl.cpp" />
+    <ClCompile Include="..\Classes\login\UserLogin.cpp" />
+    <ClCompile Include="..\Classes\md5_tools\md5_tools.cpp" />
+    <ClCompile Include="..\Classes\payment\paymentForLua.cpp" />
+    <ClCompile Include="..\Classes\platform\win32\asynchronousBox_Win32.cpp" />
+    <ClCompile Include="..\Classes\reStartScene\reStartScene.cpp" />
+    <ClCompile Include="..\Classes\sgHttp\sgHttp.cpp" />
+    <ClCompile Include="..\Classes\sgHttp\sgHttpLua.cpp" />
+    <ClCompile Include="..\Classes\sgNet\NetConnectionImpl.cpp" />
+    <ClCompile Include="..\Classes\sgNet\NetLua.cpp" />
+    <ClCompile Include="..\Classes\sgNet\NetManager.cpp" />
+    <ClCompile Include="..\Classes\sgNet\SimpleSocket\ActiveSocket.cpp" />
+    <ClCompile Include="..\Classes\sgNet\SimpleSocket\PassiveSocket.cpp" />
+    <ClCompile Include="..\Classes\sgNet\SimpleSocket\SimpleSocket.cpp" />
+    <ClCompile Include="..\Classes\sgResUpdate\ResUpdateEx.cpp" />
+    <ClCompile Include="..\Classes\sgResUpdate\ResUpdateExLua.cpp" />
+    <ClCompile Include="..\Classes\sgResUpdate\sgResUpdate.cpp" />
+    <ClCompile Include="..\Classes\tiledMap\miniz.c" />
+    <ClCompile Include="..\Classes\tiledMap\TmxEllipse.cpp" />
+    <ClCompile Include="..\Classes\tiledMap\TmxImage.cpp" />
+    <ClCompile Include="..\Classes\tiledMap\TmxImageLayer.cpp" />
+    <ClCompile Include="..\Classes\tiledMap\TmxLayer.cpp" />
+    <ClCompile Include="..\Classes\tiledMap\TmxMap.cpp" />
+    <ClCompile Include="..\Classes\tiledMap\TmxObject.cpp" />
+    <ClCompile Include="..\Classes\tiledMap\TmxObjectGroup.cpp" />
+    <ClCompile Include="..\Classes\tiledMap\TmxPolygon.cpp" />
+    <ClCompile Include="..\Classes\tiledMap\TmxPolyline.cpp" />
+    <ClCompile Include="..\Classes\tiledMap\TmxPropertySet.cpp" />
+    <ClCompile Include="..\Classes\tiledMap\TmxTerrain.cpp" />
+    <ClCompile Include="..\Classes\tiledMap\TmxTerrainArray.cpp" />
+    <ClCompile Include="..\Classes\tiledMap\TmxTile.cpp" />
+    <ClCompile Include="..\Classes\tiledMap\TmxTileLayer.cpp" />
+    <ClCompile Include="..\Classes\tiledMap\TmxTileOffset.cpp" />
+    <ClCompile Include="..\Classes\tiledMap\TmxTileset.cpp" />
+    <ClCompile Include="..\Classes\tiledMap\TmxUtil.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="SimulatorWin.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="game.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\game.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\cocos2d-x\cocos\2d\libcocos2d.vcxproj">
+      <Project>{98a51ba8-fc3a-415b-ac8f-8c7bd464e93e}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\cocos2d-x\cocos\scripting\lua-bindings\proj.win32\libluacocos2d.vcxproj">
+      <Project>{9f2d6ce6-c893-4400-b50c-6db70cc2562f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\cocos2d-x\tools\simulator\libsimulator\proj.win32\libsimulator.vcxproj">
+      <Project>{001b324a-bb91-4e83-875c-c92f75c40857}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

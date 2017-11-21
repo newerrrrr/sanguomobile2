@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="isometric" renderorder="right-down" width="12" height="12" tilewidth="256" tileheight="128" nextobjectid="1">
+ <tileset firstgid="1" name="Component1" tilewidth="256" tileheight="128" tilecount="32">
+  <image source="Component1.png" width="1024" height="1024"/>
+ </tileset>
+ <tileset firstgid="33" name="Component2" tilewidth="256" tileheight="128" tilecount="128">
+  <image source="Component2.png" width="2048" height="2048"/>
+ </tileset>
+ <imagelayer name="image1" x="-1" y="383">
+  <image source="image_44.png"/>
+ </imagelayer>
+ <imagelayer name=" image2" x="767" y="-1">
+  <image source="image_44.png"/>
+ </imagelayer>
+ <imagelayer name=" image3" x="1535" y="383">
+  <image source="image_44.png"/>
+ </imagelayer>
+ <imagelayer name="image4" x="767" y="767">
+  <image source="image_44.png"/>
+ </imagelayer>
+ <layer name="layer_2" width="12" height="12">
+  <data encoding="base64" compression="zlib">
+   eJxjYCAetJOgFgTaSFTfSqL6FhLVN5OofjKJ6jtIVD8cwgcAnk4GWg==
+  </data>
+ </layer>
+ <layer name="layer_1" width="12" height="12">
+  <data encoding="base64" compression="zlib">
+   eJyVkbEKACAIBXWIlhbb/P8frcDgYRo1HKIcLzElIp5oUivQJ8XmSEkQq5hx8znwcc7ufXF95qvRH/O3/5sf7V/pvBfu72fbj/5j7d+s9zXy5eJn/OYPmcgEPQ==
+  </data>
+ </layer>
+ <layer name="layer_mid1" width="12" height="12">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4B8AAACQAAB
+  </data>
+ </layer>
+ <layer name="layer_top" width="12" height="12">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4B8AAACQAAB
+  </data>
+ </layer>
+</map>

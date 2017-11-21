@@ -1,0 +1,142 @@
+local Email_tipsConfig = {
+	{
+		id = 1,
+		time = 30,
+		title = 145001,
+		desc = 144001,
+	},
+	{
+		id = 2,
+		time = 120,
+		title = 145002,
+		desc = 144002,
+	},
+	{
+		id = 3,
+		time = 600,
+		title = 145003,
+		desc = 144003,
+	},
+	{
+		id = 4,
+		time = 1080,
+		title = 145004,
+		desc = 144004,
+	},
+	{
+		id = 5,
+		time = 1560,
+		title = 145023,
+		desc = 144023,
+	},
+	{
+		id = 6,
+		time = 2040,
+		title = 145005,
+		desc = 144005,
+	},
+	{
+		id = 7,
+		time = 2520,
+		title = 145006,
+		desc = 144006,
+	},
+	{
+		id = 8,
+		time = 3000,
+		title = 145022,
+		desc = 144022,
+	},
+	{
+		id = 9,
+		time = 3480,
+		title = 145007,
+		desc = 144007,
+	},
+	{
+		id = 10,
+		time = 3960,
+		title = 145008,
+		desc = 144008,
+	},
+	{
+		id = 11,
+		time = 4440,
+		title = 145009,
+		desc = 144009,
+	},
+	{
+		id = 12,
+		time = 4920,
+		title = 145010,
+		desc = 144010,
+	},
+	{
+		id = 13,
+		time = 5400,
+		title = 145011,
+		desc = 144011,
+	},
+	{
+		id = 14,
+		time = 5880,
+		title = 145012,
+		desc = 144012,
+	},
+	{
+		id = 15,
+		time = 6360,
+		title = 145013,
+		desc = 144013,
+	},
+	{
+		id = 16,
+		time = 6840,
+		title = 145014,
+		desc = 144014,
+	},
+	{
+		id = 17,
+		time = 7320,
+		title = 145015,
+		desc = 144015,
+	},
+	{
+		id = 18,
+		time = 7800,
+		title = 145016,
+		desc = 144016,
+	},
+	{
+		id = 19,
+		time = 8280,
+		title = 145017,
+		desc = 144017,
+	},
+	{
+		id = 20,
+		time = 8760,
+		title = 145018,
+		desc = 144018,
+	},
+	{
+		id = 21,
+		time = 9240,
+		title = 145019,
+		desc = 144019,
+	},
+	{
+		id = 22,
+		time = 9720,
+		title = 145020,
+		desc = 144020,
+	},
+	{
+		id = 23,
+		time = 10200,
+		title = 145021,
+		desc = 144021,
+	},
+
+}
+return Email_tipsConfig

@@ -1,0 +1,55 @@
+﻿生成启动时间为 2015/11/13 11:34:46。
+     1>项目“E:\work\sanguo_mobile2\frameworks\cocos2d-x\external\Box2D\proj.win32\libbox2d.vcxproj”在节点 2 上(Build 个目标)。
+     1>Lib:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"E:\work\sanguo_mobile2\frameworks\runtime-src\proj.win32\Debug.win32\libbox2d.lib" /NOLOGO Debug.win32\b2BroadPhase.obj
+         Debug.win32\b2CollideCircle.obj
+         Debug.win32\b2CollideEdge.obj
+         Debug.win32\b2CollidePolygon.obj
+         Debug.win32\b2Collision.obj
+         Debug.win32\b2Distance.obj
+         Debug.win32\b2DynamicTree.obj
+         Debug.win32\b2TimeOfImpact.obj
+         Debug.win32\b2ChainShape.obj
+         Debug.win32\b2CircleShape.obj
+         Debug.win32\b2EdgeShape.obj
+         Debug.win32\b2PolygonShape.obj
+         Debug.win32\b2BlockAllocator.obj
+         Debug.win32\b2Draw.obj
+         Debug.win32\b2Math.obj
+         Debug.win32\b2Settings.obj
+         Debug.win32\b2StackAllocator.obj
+         Debug.win32\b2Timer.obj
+         Debug.win32\b2Body.obj
+         Debug.win32\b2ContactManager.obj
+         Debug.win32\b2Fixture.obj
+         Debug.win32\b2Island.obj
+         Debug.win32\b2World.obj
+         Debug.win32\b2WorldCallbacks.obj
+         Debug.win32\b2ChainAndCircleContact.obj
+         Debug.win32\b2ChainAndPolygonContact.obj
+         Debug.win32\b2CircleContact.obj
+         Debug.win32\b2Contact.obj
+         Debug.win32\b2ContactSolver.obj
+         Debug.win32\b2EdgeAndCircleContact.obj
+         Debug.win32\b2EdgeAndPolygonContact.obj
+         Debug.win32\b2PolygonAndCircleContact.obj
+         Debug.win32\b2PolygonContact.obj
+         Debug.win32\b2DistanceJoint.obj
+         Debug.win32\b2FrictionJoint.obj
+         Debug.win32\b2GearJoint.obj
+         Debug.win32\b2Joint.obj
+         Debug.win32\b2MotorJoint.obj
+         Debug.win32\b2MouseJoint.obj
+         Debug.win32\b2PrismaticJoint.obj
+         Debug.win32\b2PulleyJoint.obj
+         Debug.win32\b2RevoluteJoint.obj
+         Debug.win32\b2RopeJoint.obj
+         Debug.win32\b2WeldJoint.obj
+         Debug.win32\b2WheelJoint.obj
+         Debug.win32\b2Rope.obj
+         libbox2d.vcxproj -> E:\work\sanguo_mobile2\frameworks\runtime-src\proj.win32\Debug.win32\libbox2d.lib
+     1>已完成生成项目“E:\work\sanguo_mobile2\frameworks\cocos2d-x\external\Box2D\proj.win32\libbox2d.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:04.99

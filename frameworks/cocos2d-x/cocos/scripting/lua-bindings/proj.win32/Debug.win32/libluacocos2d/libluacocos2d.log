@@ -1,0 +1,94 @@
+﻿生成启动时间为 2016/12/8 16:50:11。
+     1>项目“E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\scripting\lua-bindings\proj.win32\libluacocos2d.vcxproj”在节点 3 上(Build 个目标)。
+     1>PreBuildEvent:
+         if not exist "E:\work\sanguo_mobile2\frameworks\runtime-src\proj.win32\Debug.win32\" mkdir "E:\work\sanguo_mobile2\frameworks\runtime-src\proj.win32\Debug.win32\"
+         xcopy /Y /Q "E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\scripting\lua-bindings\proj.win32\..\..\..\..\external\lua\luajit\prebuilt\win32\*.*" "E:\work\sanguo_mobile2\frameworks\runtime-src\proj.win32\Debug.win32\"
+         :VCEnd
+         复制了 3 个文件
+       ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\\" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos\2d" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos\base" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos\3d" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos\physics3d" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos\audio\include" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos\ui" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos\navmesh" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\external" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\external\lua" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\external\lua\tolua" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\external\lua\luajit\include" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\external\libwebsockets\win32\include" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\extensions" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos\editor-support" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos\editor-support\cocostudio" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos\editor-support\cocostudio\ActionTimeline" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos\editor-support\spine" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos\editor-support\cocosbuilder" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos\scripting\lua-bindings\manual" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos\scripting\lua-bindings\auto" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos\scripting\lua-bindings\manual\extension" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos\scripting\lua-bindings\manual\cocostudio" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos\scripting\lua-bindings\manual\ui" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos\scripting\lua-bindings\manual\cocos2d" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos\scripting\lua-bindings\manual\navmesh" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos\editor-support" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos\platform" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos\platform\desktop" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\external\glfw3\include\win32" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\external\win32-specific\gles\include\OGLES" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\external\freetype2\include\win32\freetype2" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\external\freetype2\include\win32\\" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\external" /Z7 /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D COCOS2D_DEBUG=1 /D _CRT_SECURE_NO_WARNINGS /D _VARIADIC_MAX=10 /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\libluacocos2d\\" /Fd"Debug.win32\libluacocos2d\vc120.pdb" /Gd /TP /wd4800 /wd4267 /wd4251 /wd4244 /analyze- /errorReport:prompt ..\auto\lua_cocos2dx_extension_auto.cpp ..\manual\cocosbuilder\CCBProxy.cpp ..\manual\cocosbuilder\lua_cocos2dx_cocosbuilder_manual.cpp ..\manual\extension\lua_cocos2dx_extension_manual.cpp
+         lua_cocos2dx_extension_auto.cpp
+         CCBProxy.cpp
+         lua_cocos2dx_cocosbuilder_manual.cpp
+         lua_cocos2dx_extension_manual.cpp
+     1>..\auto\lua_cocos2dx_extension_auto.cpp(15833): warning C4083: 应输入“(”；找到标识符“NO”
+     1>e:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_extension_auto.cpp(15840): warning C4700: 使用了未初始化的局部变量“arg0”
+       Lib:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"E:\work\sanguo_mobile2\frameworks\runtime-src\proj.win32\Debug.win32\libluacocos2d.lib" /NOLOGO Debug.win32\libluacocos2d\auxiliar.obj
+         Debug.win32\libluacocos2d\buffer.obj
+         Debug.win32\libluacocos2d\except.obj
+         Debug.win32\libluacocos2d\inet.obj
+         Debug.win32\libluacocos2d\io.obj
+         Debug.win32\libluacocos2d\luasocket.obj
+         Debug.win32\libluacocos2d\luasocket_scripts.obj
+         Debug.win32\libluacocos2d\mime.obj
+         Debug.win32\libluacocos2d\options.obj
+         Debug.win32\libluacocos2d\select.obj
+         Debug.win32\libluacocos2d\tcp.obj
+         Debug.win32\libluacocos2d\timeout.obj
+         Debug.win32\libluacocos2d\udp.obj
+         Debug.win32\libluacocos2d\wsocket.obj
+         Debug.win32\libluacocos2d\tolua_event.obj
+         Debug.win32\libluacocos2d\tolua_is.obj
+         Debug.win32\libluacocos2d\tolua_map.obj
+         Debug.win32\libluacocos2d\tolua_push.obj
+         Debug.win32\libluacocos2d\tolua_to.obj
+         Debug.win32\libluacocos2d\xxtea.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_3d_auto.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_audioengine_auto.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_auto.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_cocosbuilder_auto.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_cocosdenshion_auto.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_csloader_auto.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_experimental_auto.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_experimental_video_auto.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_experimental_webview_auto.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_extension_auto.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_navmesh_auto.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_physics3d_auto.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_physics_auto.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_spine_auto.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_studio_auto.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_ui_auto.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_3d_manual.obj
+         Debug.win32\libluacocos2d\aes.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_audioengine_manual.obj
+         Debug.win32\libluacocos2d\CCLuaBridge.obj
+         Debug.win32\libluacocos2d\CCLuaEngine.obj
+         Debug.win32\libluacocos2d\CCLuaStack.obj
+         Debug.win32\libluacocos2d\CCLuaValue.obj
+         Debug.win32\libluacocos2d\Cocos2dxLuaLoader.obj
+         Debug.win32\libluacocos2d\LuaOpengl.obj
+         Debug.win32\libluacocos2d\LuaScriptHandlerMgr.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_deprecated.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_experimental_manual.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_manual.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_physics_manual.obj
+         Debug.win32\libluacocos2d\CCBProxy.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_cocosbuilder_manual.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_cocosdenshion_manual.obj
+         Debug.win32\libluacocos2d\CustomGUIReader.obj
+         "Debug.win32\libluacocos2d\lua-cocos-studio-conversions.obj"
+         Debug.win32\libluacocos2d\lua_cocos2dx_coco_studio_manual.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_csloader_manual.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_extension_manual.obj
+         Debug.win32\libluacocos2d\LuaBasicConversions.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_navmesh_conversions.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_navmesh_manual.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_network_manual.obj
+         Debug.win32\libluacocos2d\lua_extensions.obj
+         Debug.win32\libluacocos2d\Lua_web_socket.obj
+         Debug.win32\libluacocos2d\lua_xml_http_request.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_physics3d_manual.obj
+         Debug.win32\libluacocos2d\LuaSkeletonAnimation.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_spine_manual.obj
+         Debug.win32\libluacocos2d\tolua_fix.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_experimental_video_manual.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_experimental_webview_manual.obj
+         Debug.win32\libluacocos2d\lua_cocos2dx_ui_manual.obj
+         libluacocos2d.vcxproj -> E:\work\sanguo_mobile2\frameworks\runtime-src\proj.win32\Debug.win32\libluacocos2d.lib
+     1>已完成生成项目“E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\scripting\lua-bindings\proj.win32\libluacocos2d.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:25.59

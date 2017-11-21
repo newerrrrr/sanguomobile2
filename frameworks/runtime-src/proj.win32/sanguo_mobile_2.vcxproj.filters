@@ -1,0 +1,551 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Classes">
+      <UniqueIdentifier>{fc5cb953-2953-4968-83b3-39e3ff951754}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="win32">
+      <UniqueIdentifier>{037a9a02-b906-4cc5-ad98-304acd4e25ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{2d1d0979-58cd-4ab6-b91c-13650158f1fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\sgNet">
+      <UniqueIdentifier>{983934c1-9ec6-4124-a845-6d8237660a7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\sgNet\SimpleSocket">
+      <UniqueIdentifier>{bf197383-0e86-4921-acc8-ccf5fc1f148f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\sgHttp">
+      <UniqueIdentifier>{5ef6c0e7-8549-422a-bdea-454cfac408f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\sgResUpdate">
+      <UniqueIdentifier>{f1ed19b1-26b9-4910-a79a-30ee064db781}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\common">
+      <UniqueIdentifier>{d9179568-c09e-4961-b194-2b80fe16259e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\forLua">
+      <UniqueIdentifier>{698bab42-30c5-4360-b88f-ecf799533967}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\gameDelegate">
+      <UniqueIdentifier>{ccf71a06-ea27-4ff3-8b75-999e3746565f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\cTools_Control">
+      <UniqueIdentifier>{5cc86fef-3d5b-4c01-9c6b-c49e641ae116}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\httpNet">
+      <UniqueIdentifier>{d2691a8b-ee76-48bd-8705-49ec6e987fc1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\cjson">
+      <UniqueIdentifier>{56746524-50bd-4e72-b2ff-e1b4fbb57200}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\tiledMap">
+      <UniqueIdentifier>{a983a57c-ce32-46b9-8b47-4768ca90b56f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\login">
+      <UniqueIdentifier>{ed0a81cb-f96f-4545-8fb2-d96227e40938}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\md5_tools">
+      <UniqueIdentifier>{862e4b8c-b53d-416a-a5a5-258d189a189a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\reStartScene">
+      <UniqueIdentifier>{ea752bca-cc22-47cb-b445-efbc3c5436bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\payment">
+      <UniqueIdentifier>{e6b46a5e-9faa-4c4b-bd26-94f49434a7ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\platform">
+      <UniqueIdentifier>{732eb3fb-c9e4-4c91-816c-076ef86c540f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\platform\win32">
+      <UniqueIdentifier>{f954503e-0d28-4419-bc46-3dbd5f76442b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="SimulatorWin.h" />
+    <ClInclude Include="stdafx.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ide-support\CodeIDESupport.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ide-support\lua_debugger.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ide-support\RuntimeLuaImpl.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sgNet\CAutoLock.h">
+      <Filter>Classes\sgNet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sgNet\NetCommon.h">
+      <Filter>Classes\sgNet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sgNet\NetConnectionImpl.h">
+      <Filter>Classes\sgNet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sgNet\NetConnetionInterface.h">
+      <Filter>Classes\sgNet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sgNet\NetLua.h">
+      <Filter>Classes\sgNet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sgNet\NetManager.h">
+      <Filter>Classes\sgNet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sgNet\Singleton.h">
+      <Filter>Classes\sgNet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sgNet\SimpleSocket\ActiveSocket.h">
+      <Filter>Classes\sgNet\SimpleSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sgNet\SimpleSocket\Host.h">
+      <Filter>Classes\sgNet\SimpleSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sgNet\SimpleSocket\PassiveSocket.h">
+      <Filter>Classes\sgNet\SimpleSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sgNet\SimpleSocket\SimpleSocket.h">
+      <Filter>Classes\sgNet\SimpleSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sgNet\SimpleSocket\StatTimer.h">
+      <Filter>Classes\sgNet\SimpleSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sgHttp\CAutoLock.h">
+      <Filter>Classes\sgHttp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sgHttp\sgHttp.h">
+      <Filter>Classes\sgHttp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sgHttp\sgHttpLua.h">
+      <Filter>Classes\sgHttp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sgResUpdate\sgResUpdate.h">
+      <Filter>Classes\sgResUpdate</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\forLua\forLua.h">
+      <Filter>Classes\forLua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\gameDelegate\gameDelegate.h">
+      <Filter>Classes\gameDelegate</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\forLua\luaBindFunction.h">
+      <Filter>Classes\forLua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\forLua\cToolsForLua.h">
+      <Filter>Classes\forLua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\common\Crypto.h">
+      <Filter>Classes\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\common\md5.h">
+      <Filter>Classes\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\cTools_Control\MapScrollView.h">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\cTools_Control\cTools_Control.h">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\cTools_Control\lua_cTools_Control_auto.hpp">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\common\PSDeviceInfo.h">
+      <Filter>Classes\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\common\PSDeviceInfoLua.h">
+      <Filter>Classes\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\httpNet\httpNet.h">
+      <Filter>Classes\httpNet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\cJson\fpconv.h">
+      <Filter>Classes\cjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\cJson\lua_cjson.h">
+      <Filter>Classes\cjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\cJson\strbuf.h">
+      <Filter>Classes\cjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\tiledMap\TmxEllipse.h">
+      <Filter>Classes\tiledMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\tiledMap\TmxImage.h">
+      <Filter>Classes\tiledMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\tiledMap\TmxImageLayer.h">
+      <Filter>Classes\tiledMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\tiledMap\TmxLayer.h">
+      <Filter>Classes\tiledMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\tiledMap\TmxMap.h">
+      <Filter>Classes\tiledMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\tiledMap\TmxMapTile.h">
+      <Filter>Classes\tiledMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\tiledMap\TmxObject.h">
+      <Filter>Classes\tiledMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\tiledMap\TmxObjectGroup.h">
+      <Filter>Classes\tiledMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\tiledMap\TmxPoint.h">
+      <Filter>Classes\tiledMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\tiledMap\TmxPolygon.h">
+      <Filter>Classes\tiledMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\tiledMap\TmxPolyline.h">
+      <Filter>Classes\tiledMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\tiledMap\TmxPropertySet.h">
+      <Filter>Classes\tiledMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\tiledMap\TmxTerrain.h">
+      <Filter>Classes\tiledMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\tiledMap\TmxTerrainArray.h">
+      <Filter>Classes\tiledMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\tiledMap\TmxTile.h">
+      <Filter>Classes\tiledMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\tiledMap\TmxTileLayer.h">
+      <Filter>Classes\tiledMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\tiledMap\TmxTileOffset.h">
+      <Filter>Classes\tiledMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\tiledMap\TmxTileset.h">
+      <Filter>Classes\tiledMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\tiledMap\TmxUtil.h">
+      <Filter>Classes\tiledMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\tiledMap\Tmx.h">
+      <Filter>Classes\tiledMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\cTools_Control\LHSTmxLayer.h">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\cTools_Control\LHSTmxCache.h">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\cTools_Control\LHSTmxData.h">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\cTools_Control\LHSTmxImageLayer.h">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\cTools_Control\LHSTmxTileLayer.h">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\cTools_Control\LHSTmxBaseLayer.h">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\cTools_Control\LHSArmature.h">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\cTools_Control\LHSArmatureAnimation.h">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\cTools_Control\MapScrollViewPerspective.h">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\common\Sha1.h">
+      <Filter>Classes\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\login\UserLogin.h">
+      <Filter>Classes\login</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\cTools_Control\LHSRenderTextureToScreen.h">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\cTools_Control\LHSOutNotVisit.h">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\cTools_Control\LHSTools.h">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\cTools_Control\LHSRenderTextureToScreenToLua.h">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\cTools_Control\LHSAnimation.h">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\cTools_Control\LHSAnimationReturn.h">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\cTools_Control\LHSCustomShaderSprite.h">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\cTools_Control\LHSManualVisit.h">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sgResUpdate\ResUpdateEx.h">
+      <Filter>Classes\sgResUpdate</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sgResUpdate\ResUpdateExLua.h">
+      <Filter>Classes\sgResUpdate</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\md5_tools\md5_tools.h">
+      <Filter>Classes\md5_tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\reStartScene\reStartScene.h">
+      <Filter>Classes\reStartScene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\payment\paymentForLua.h">
+      <Filter>Classes\payment</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\platform\win32\asynchronousBox_Win32.h">
+      <Filter>Classes\platform\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\cTools_Control\LHSSchedulerActionManager.h">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\cTools_Control\LHSDrawNodeToLua.h">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="SimulatorWin.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ide-support\lua_debugger.c">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ide-support\RuntimeLuaImpl.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\sgNet\NetConnectionImpl.cpp">
+      <Filter>Classes\sgNet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\sgNet\NetLua.cpp">
+      <Filter>Classes\sgNet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\sgNet\NetManager.cpp">
+      <Filter>Classes\sgNet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\sgNet\SimpleSocket\ActiveSocket.cpp">
+      <Filter>Classes\sgNet\SimpleSocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\sgNet\SimpleSocket\PassiveSocket.cpp">
+      <Filter>Classes\sgNet\SimpleSocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\sgNet\SimpleSocket\SimpleSocket.cpp">
+      <Filter>Classes\sgNet\SimpleSocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\sgHttp\sgHttp.cpp">
+      <Filter>Classes\sgHttp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\sgHttp\sgHttpLua.cpp">
+      <Filter>Classes\sgHttp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\sgResUpdate\sgResUpdate.cpp">
+      <Filter>Classes\sgResUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\forLua\forLua.cpp">
+      <Filter>Classes\forLua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\gameDelegate\gameDelegate.cpp">
+      <Filter>Classes\gameDelegate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\forLua\luaBindFunction.cpp">
+      <Filter>Classes\forLua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\forLua\cToolsForLua.cpp">
+      <Filter>Classes\forLua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\common\Crypto.cpp">
+      <Filter>Classes\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\common\md5.cpp">
+      <Filter>Classes\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\cTools_Control\MapScrollView.cpp">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\cTools_Control\lua_cTools_Control_auto.cpp">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\common\PSDeviceInfo.cpp">
+      <Filter>Classes\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\common\PSDeviceInfoLua.cpp">
+      <Filter>Classes\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\httpNet\httpNet.cpp">
+      <Filter>Classes\httpNet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\cJson\strbuf.c">
+      <Filter>Classes\cjson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\cJson\fpconv.c">
+      <Filter>Classes\cjson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\cJson\lua_cjson.c">
+      <Filter>Classes\cjson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\tiledMap\miniz.c">
+      <Filter>Classes\tiledMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\tiledMap\TmxEllipse.cpp">
+      <Filter>Classes\tiledMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\tiledMap\TmxImage.cpp">
+      <Filter>Classes\tiledMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\tiledMap\TmxImageLayer.cpp">
+      <Filter>Classes\tiledMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\tiledMap\TmxLayer.cpp">
+      <Filter>Classes\tiledMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\tiledMap\TmxMap.cpp">
+      <Filter>Classes\tiledMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\tiledMap\TmxObject.cpp">
+      <Filter>Classes\tiledMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\tiledMap\TmxObjectGroup.cpp">
+      <Filter>Classes\tiledMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\tiledMap\TmxPolygon.cpp">
+      <Filter>Classes\tiledMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\tiledMap\TmxPolyline.cpp">
+      <Filter>Classes\tiledMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\tiledMap\TmxPropertySet.cpp">
+      <Filter>Classes\tiledMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\tiledMap\TmxTerrain.cpp">
+      <Filter>Classes\tiledMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\tiledMap\TmxTerrainArray.cpp">
+      <Filter>Classes\tiledMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\tiledMap\TmxTile.cpp">
+      <Filter>Classes\tiledMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\tiledMap\TmxTileLayer.cpp">
+      <Filter>Classes\tiledMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\tiledMap\TmxTileOffset.cpp">
+      <Filter>Classes\tiledMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\tiledMap\TmxTileset.cpp">
+      <Filter>Classes\tiledMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\tiledMap\TmxUtil.cpp">
+      <Filter>Classes\tiledMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\cTools_Control\LHSTmxLayer.cpp">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\cTools_Control\LHSTmxCache.cpp">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\cTools_Control\LHSTmxData.cpp">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\cTools_Control\LHSTmxTileLayer.cpp">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\cTools_Control\LHSTmxImageLayer.cpp">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\cTools_Control\LHSArmature.cpp">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\cTools_Control\LHSArmatureAnimation.cpp">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\cTools_Control\MapScrollViewPerspective.cpp">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\common\Sha1.cpp">
+      <Filter>Classes\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\login\UserLogin.cpp">
+      <Filter>Classes\login</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\cTools_Control\LHSRenderTextureToScreen.cpp">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\cTools_Control\LHSOutNotVisit.cpp">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\cTools_Control\LHSTools.cpp">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\cTools_Control\LHSRenderTextureToScreenToLua.cpp">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\cTools_Control\LHSAnimation.cpp">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\cTools_Control\LHSAnimationReturn.cpp">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\cTools_Control\LHSCustomShaderSprite.cpp">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\cTools_Control\LHSManualVisit.cpp">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\sgResUpdate\ResUpdateEx.cpp">
+      <Filter>Classes\sgResUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\sgResUpdate\ResUpdateExLua.cpp">
+      <Filter>Classes\sgResUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\md5_tools\md5_tools.cpp">
+      <Filter>Classes\md5_tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\reStartScene\reStartScene.cpp">
+      <Filter>Classes\reStartScene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\payment\paymentForLua.cpp">
+      <Filter>Classes\payment</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\platform\win32\asynchronousBox_Win32.cpp">
+      <Filter>Classes\platform\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\cTools_Control\LHSSchedulerActionManager.cpp">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\cTools_Control\LHSDrawNodeToLua.cpp">
+      <Filter>Classes\cTools_Control</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="game.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\game.ico" />
+  </ItemGroup>
+</Project>

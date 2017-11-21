@@ -1,0 +1,20 @@
+info face="方正大黑简体" size=44 bold=0 italic=0 charset="" unicode=1 stretchH=100 smooth=1 aa=1 padding=3,1,3,15 spacing=3,3 outline=0
+common lineHeight=44 base=35 scaleW=256 scaleH=256 pages=1 packed=0 alphaChnl=1 redChnl=0 greenChnl=0 blueChnl=0
+page id=0 file="mission_num_0.png"
+chars count=16
+char id=43   x=130   y=0     width=53    height=50    xoffset=-15   yoffset=-3    xadvance=23    page=0  chnl=100
+char id=45   x=186   y=0     width=53    height=50    xoffset=-15   yoffset=-3    xadvance=23    page=0  chnl=100
+char id=46   x=165   y=159   width=41    height=50    xoffset=-15   yoffset=-3    xadvance=11    page=0  chnl=100
+char id=48   x=0     y=53    width=52    height=50    xoffset=-15   yoffset=-3    xadvance=22    page=0  chnl=100
+char id=49   x=55    y=53    width=52    height=50    xoffset=-15   yoffset=-3    xadvance=22    page=0  chnl=100
+char id=50   x=110   y=53    width=52    height=50    xoffset=-15   yoffset=-3    xadvance=22    page=0  chnl=100
+char id=51   x=165   y=53    width=52    height=50    xoffset=-15   yoffset=-3    xadvance=22    page=0  chnl=100
+char id=52   x=0     y=106   width=52    height=50    xoffset=-15   yoffset=-3    xadvance=22    page=0  chnl=100
+char id=53   x=55    y=106   width=52    height=50    xoffset=-15   yoffset=-3    xadvance=22    page=0  chnl=100
+char id=54   x=110   y=106   width=52    height=50    xoffset=-15   yoffset=-3    xadvance=22    page=0  chnl=100
+char id=55   x=165   y=106   width=52    height=50    xoffset=-15   yoffset=-3    xadvance=22    page=0  chnl=100
+char id=56   x=0     y=159   width=52    height=50    xoffset=-15   yoffset=-3    xadvance=22    page=0  chnl=100
+char id=57   x=55    y=159   width=52    height=50    xoffset=-15   yoffset=-3    xadvance=22    page=0  chnl=100
+char id=75   x=70    y=0     width=57    height=50    xoffset=-15   yoffset=-3    xadvance=27    page=0  chnl=100
+char id=77   x=0     y=0     width=67    height=50    xoffset=-15   yoffset=-3    xadvance=37    page=0  chnl=100
+char id=120  x=110   y=159   width=52    height=50    xoffset=-15   yoffset=-3    xadvance=22    page=0  chnl=100

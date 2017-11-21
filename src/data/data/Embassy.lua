@@ -1,0 +1,4 @@
+local EmbassyConfig = {
+
+}
+return EmbassyConfig

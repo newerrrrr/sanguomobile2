@@ -1,0 +1,26 @@
+﻿生成启动时间为 2015/11/13 11:34:47。
+     1>项目“E:\work\sanguo_mobile2\frameworks\cocos2d-x\external\recast\proj.win32\librecast.vcxproj”在节点 3 上(Build 个目标)。
+     1>Lib:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"E:\work\sanguo_mobile2\frameworks\runtime-src\proj.win32\Debug.win32\librecast.lib" /NOLOGO Debug.win32\DebugDraw.obj
+         Debug.win32\DetourDebugDraw.obj
+         Debug.win32\DetourCrowd.obj
+         Debug.win32\DetourLocalBoundary.obj
+         Debug.win32\DetourObstacleAvoidance.obj
+         Debug.win32\DetourPathCorridor.obj
+         Debug.win32\DetourPathQueue.obj
+         Debug.win32\DetourProximityGrid.obj
+         Debug.win32\DetourTileCache.obj
+         Debug.win32\DetourTileCacheBuilder.obj
+         Debug.win32\DetourAlloc.obj
+         Debug.win32\DetourCommon.obj
+         Debug.win32\DetourNavMesh.obj
+         Debug.win32\DetourNavMeshBuilder.obj
+         Debug.win32\DetourNavMeshQuery.obj
+         Debug.win32\DetourNode.obj
+         Debug.win32\fastlz.obj
+         librecast.vcxproj -> E:\work\sanguo_mobile2\frameworks\runtime-src\proj.win32\Debug.win32\librecast.lib
+     1>已完成生成项目“E:\work\sanguo_mobile2\frameworks\cocos2d-x\external\recast\proj.win32\librecast.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:03.12

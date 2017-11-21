@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>Effect_RenWuLoading_ChengQiang.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{1280,235}}</string>
+                <key>offset</key>
+                <string>{0,202}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{1280,235}}</string>
+                <key>sourceSize</key>
+                <string>{1280,639}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>2</integer>
+            <key>realTextureFileName</key>
+            <string>Effect_RenWuLoading3.png</string>
+            <key>size</key>
+            <string>{1284,239}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:b5c451c92362c4edfe9b9c6c681206d8:918d9937d6262d676b92e28aa0cf8ee3:fcd5ff4e4849f2caf8540556091e51eb$</string>
+            <key>textureFileName</key>
+            <string>Effect_RenWuLoading3.png</string>
+        </dict>
+    </dict>
+</plist>

@@ -1,0 +1,27 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "ee2e4443-6090-4c57-ba0c-4e134836b713++505",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "ee2e4443-6090-4c57-ba0c-4e134836b713++505" : {
+      "DVTSourceControlWorkingCopyRepositoryBranchesLocationKey" : "branches",
+      "DVTSourceControlWorkingCopyRepositoryTagsLocationKey" : "tags",
+      "DVTSourceControlWorkingCopyRepositoryPrimaryBranchLocationKey" : "trunk"
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "ee2e4443-6090-4c57-ba0c-4e134836b713++505" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "10240482-DBB2-4C67-B32C-2D0E7794AF9C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "ee2e4443-6090-4c57-ba0c-4e134836b713++505" : "workspace\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "sanguo_mobile_2",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "sanguo_mobile_2\/frameworks\/runtime-src\/proj.ios_mac_haowan\/sanguo_mobile_2.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/10.103.252.100:18080\/svn\/sanguo_mobile_2_client",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ee2e4443-6090-4c57-ba0c-4e134836b713++505"
+    }
+  ]
+}

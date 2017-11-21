@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="isometric" renderorder="right-down" width="12" height="12" tilewidth="256" tileheight="128" nextobjectid="1">
+ <tileset firstgid="1" name="Component1" tilewidth="256" tileheight="128" tilecount="128">
+  <image source="Component1.png" width="2048" height="2048"/>
+ </tileset>
+ <tileset firstgid="129" name="Component2" tilewidth="256" tileheight="128" tilecount="128">
+  <image source="Component2.png" width="2048" height="2048"/>
+ </tileset>
+ <imagelayer name="image1" x="-1" y="383">
+  <image source="image_44.png"/>
+ </imagelayer>
+ <imagelayer name=" image2" x="767" y="-1">
+  <image source="image_44.png"/>
+ </imagelayer>
+ <imagelayer name=" image3" x="1535" y="383">
+  <image source="image_44.png"/>
+ </imagelayer>
+ <imagelayer name="image4" x="767" y="767">
+  <image source="image_44.png"/>
+ </imagelayer>
+ <layer name=" layer_3" width="12" height="12">
+  <data encoding="base64" compression="zlib">
+   eJxjYCAM9KC0ORFqdaG0GRFqYcAUStvhUaMKpU2gtC0J5o8C2gEAQwUB0g==
+  </data>
+ </layer>
+ <layer name="layer_2" width="12" height="12">
+  <data encoding="base64" compression="zlib">
+   eJxbxkAamDaqflirbwPibUC8HYh3APFyKBtZDFkcAG+7Dsc=
+  </data>
+ </layer>
+ <layer name="layer_1" width="12" height="12">
+  <data encoding="base64" compression="zlib">
+   eJxTZGBg4ARiRiA2RMIiUDF0rESEehgAsRVJVM+IpJ4YrAg1D8TmRsIgMWMoRrZXiUT1+MznhGJjJIzsB1wYWT2y+ZxYaPSwUCKg3hBJHt39xKgH0dJALAOlCfEBoJwLfA==
+  </data>
+ </layer>
+ <layer name="layer_mid1" width="12" height="12">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4B8AAACQAAB
+  </data>
+ </layer>
+ <layer name="layer_top" width="12" height="12">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4B8AAACQAAB
+  </data>
+ </layer>
+</map>

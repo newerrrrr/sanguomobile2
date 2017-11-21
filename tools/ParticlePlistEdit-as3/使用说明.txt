@@ -1,0 +1,6 @@
+PlistEdit.air为安装程序。
+安装前电脑需要安装adobe air，请自行百度搜索下载。
+1.安装adobe air环境
+2.安装PlistEdit.air
+
+打开应用程序，将要修改的plist文件放在安装目录下的plists文件夹中（可以多个文件），输入要修改的type，点修改按钮

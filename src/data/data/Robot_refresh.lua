@@ -1,0 +1,81 @@
+local Robot_refreshConfig = {
+	{
+		id = 1,
+		build_level = 5,
+		troop = {{20106,10001},{20022,30001},},
+		day_start = 1,
+		day_end = 15,
+	},
+	{
+		id = 2,
+		build_level = 6,
+		troop = {{20106,10001},{20022,30001},},
+		day_start = 1,
+		day_end = 15,
+	},
+	{
+		id = 3,
+		build_level = 6,
+		troop = {{20106,10001},{20022,30001},{20026,20001},},
+		day_start = 1,
+		day_end = 15,
+	},
+	{
+		id = 4,
+		build_level = 7,
+		troop = {{20106,10001},{20022,30001},{20026,20001},},
+		day_start = 2,
+		day_end = 15,
+	},
+	{
+		id = 5,
+		build_level = 7,
+		troop = {{20106,10001},{20022,30001},{20026,20001},{20008,20002},},
+		day_start = 2,
+		day_end = 15,
+	},
+	{
+		id = 6,
+		build_level = 8,
+		troop = {{20106,10001},{20022,30001},{20026,20001},},
+		day_start = 3,
+		day_end = 15,
+	},
+	{
+		id = 7,
+		build_level = 8,
+		troop = {{20106,10001},{20022,30001},{20026,20001},{20008,20002},},
+		day_start = 3,
+		day_end = 15,
+	},
+	{
+		id = 9,
+		build_level = 9,
+		troop = {{20106,10001},{20022,30001},{20026,20001},},
+		day_start = 4,
+		day_end = 15,
+	},
+	{
+		id = 10,
+		build_level = 9,
+		troop = {{20106,10001},{20022,30001},{20026,20001},{20008,20002},},
+		day_start = 4,
+		day_end = 15,
+	},
+	{
+		id = 11,
+		build_level = 10,
+		troop = {{20106,10003},{20022,30003},{20026,20003},{20008,20004},},
+		day_start = 5,
+		day_end = 15,
+	},
+	{
+		id = 12,
+		build_level = 10,
+		troop = {{20106,10003},{20022,30003},{20026,20003},{20008,20004},{20021,40004},},
+		day_start = 5,
+		day_end = 15,
+	},
+
+}
+return Robot_refreshConfig

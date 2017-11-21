@@ -1,0 +1,15 @@
+info face="方正胖头鱼简体" size=70 bold=1 italic=0 charset="" unicode=1 stretchH=100 smooth=1 aa=1 padding=7,7,7,7 spacing=10,10 outline=0
+common lineHeight=70 base=56 scaleW=512 scaleH=256 pages=1 packed=0 alphaChnl=1 redChnl=0 greenChnl=0 blueChnl=0
+page id=0 file="big_kill_num_0.png"
+chars count=11
+char id=32   x=214   y=94    width=32    height=84    xoffset=-7    yoffset=-7    xadvance=18    page=0  chnl=15
+char id=48   x=147   y=0     width=62    height=84    xoffset=-7    yoffset=-7    xadvance=48    page=0  chnl=15
+char id=49   x=219   y=0     width=62    height=84    xoffset=-7    yoffset=-7    xadvance=48    page=0  chnl=15
+char id=50   x=291   y=0     width=62    height=84    xoffset=-7    yoffset=-7    xadvance=48    page=0  chnl=15
+char id=51   x=363   y=0     width=62    height=84    xoffset=-7    yoffset=-7    xadvance=48    page=0  chnl=15
+char id=52   x=74    y=0     width=63    height=84    xoffset=-7    yoffset=-7    xadvance=49    page=0  chnl=15
+char id=53   x=144   y=94    width=60    height=84    xoffset=-7    yoffset=-7    xadvance=46    page=0  chnl=15
+char id=54   x=435   y=0     width=62    height=84    xoffset=-7    yoffset=-7    xadvance=48    page=0  chnl=15
+char id=55   x=0     y=94    width=62    height=84    xoffset=-7    yoffset=-7    xadvance=48    page=0  chnl=15
+char id=56   x=0     y=0     width=64    height=84    xoffset=-7    yoffset=-7    xadvance=50    page=0  chnl=15
+char id=57   x=72    y=94    width=62    height=84    xoffset=-7    yoffset=-7    xadvance=48    page=0  chnl=15

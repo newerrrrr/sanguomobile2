@@ -1,0 +1,8 @@
+运行sanguo_mobile_2.bat 启动模拟器。
+
+如果出现异常，请检查确认：
+testplayer,src,res三个文件夹放在同级目录，并且所在路径不存在中文名称的文件夹。
+
+如果还是不能解决，请找客户端程序帮助解决。
+
+如果需要调整模拟器屏幕尺寸， 编辑 "testplayer/bin/config.json" 中最靠上的width和height

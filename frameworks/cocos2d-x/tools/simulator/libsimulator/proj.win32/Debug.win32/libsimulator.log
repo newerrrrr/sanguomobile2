@@ -1,0 +1,87 @@
+﻿生成启动时间为 2016/12/8 9:58:43。
+     1>项目“E:\work\sanguo_mobile2\frameworks\cocos2d-x\tools\simulator\libsimulator\proj.win32\libsimulator.vcxproj”在节点 3 上(Build 个目标)。
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\tools\simulator\libsimulator\proj.win32\\" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\tools\simulator\libsimulator\proj.win32\..\lib\protobuf-lite" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\tools\simulator\libsimulator\proj.win32\..\lib" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\external\win32-specific\zlib\include" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos\scripting\lua-bindings\auto" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos\scripting\lua-bindings\manual" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos\audio\include" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\external" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\external\lua\lua" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\external\lua\tolua" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\external\chipmunk\include\chipmunk" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\external\curl\include\win32" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\extensions" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\\" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos\editor-support" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos\platform" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\cocos\platform\desktop" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\external\glfw3\include\win32" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\external\win32-specific\gles\include\OGLES" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\external\freetype2\include\win32\freetype2" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\external\freetype2\include\win32\\" /I"E:\work\sanguo_mobile2\frameworks\cocos2d-x\cocos\2d\..\..\external" /Zi /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _WINDOWS /D STRICT /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS_DEBUG /D COCOS2D_DEBUG=1 /D GLFW_EXPOSE_NATIVE_WIN32 /D GLFW_EXPOSE_NATIVE_WGL /D _VARIADIC_MAX=10 /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /D _SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc120.pdb" /Gd /TP /wd4267 /wd4251 /wd4244 /FIalgorithm /analyze- /errorReport:prompt ..\lib\AppEvent.cpp ..\lib\AppLang.cpp ..\lib\PlayerMenuServiceProtocol.cpp ..\lib\PlayerProtocol.cpp ..\lib\PlayerTaskServiceProtocol.cpp ..\lib\ProjectConfig\ProjectConfig.cpp ..\lib\ProjectConfig\SimulatorConfig.cpp ..\lib\network\CCHTTPRequest.cpp ..\lib\platform\win32\PlayerEditBoxServiceWin.cpp ..\lib\platform\win32\PlayerFileDialogServiceWin.cpp ..\lib\platform\win32\PlayerMenuServiceWin.cpp ..\lib\platform\win32\PlayerMessageBoxServiceWin.cpp ..\lib\platform\win32\PlayerTaskServiceWin.cpp ..\lib\platform\win32\PlayerWin.cpp ..\lib\runtime\ConfigParser.cpp ..\lib\runtime\ConnectWaitLayer.cpp ..\lib\runtime\ConsoleCommand.cpp ..\lib\runtime\FileServer.cpp ..\lib\runtime\Runtime.cpp ..\lib\runtime\RuntimeCCSImpl.cpp ..\lib\runtime\RuntimeProtocol.cpp ..\lib\runtime\VisibleRect.cpp Runtime_win32.cpp
+         AppEvent.cpp
+         AppLang.cpp
+         PlayerMenuServiceProtocol.cpp
+         PlayerProtocol.cpp
+         PlayerTaskServiceProtocol.cpp
+         ProjectConfig.cpp
+         SimulatorConfig.cpp
+         CCHTTPRequest.cpp
+         PlayerEditBoxServiceWin.cpp
+         PlayerFileDialogServiceWin.cpp
+         PlayerMenuServiceWin.cpp
+         PlayerMessageBoxServiceWin.cpp
+         PlayerTaskServiceWin.cpp
+         PlayerWin.cpp
+         ConfigParser.cpp
+         ConnectWaitLayer.cpp
+     1>..\lib\runtime\ConfigParser.cpp(114): warning C4018: “<”: 有符号/无符号不匹配
+         ConsoleCommand.cpp
+         FileServer.cpp
+         Runtime.cpp
+         RuntimeCCSImpl.cpp
+         RuntimeProtocol.cpp
+         VisibleRect.cpp
+         Runtime_win32.cpp
+       Lib:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"E:\work\sanguo_mobile2\frameworks\runtime-src\proj.win32\Debug.win32\libsimulator.lib" /NOLOGO Debug.win32\CCHTTPRequest.obj
+         "Debug.win32\DeviceEx-win32.obj"
+         Debug.win32\PlayerEditBoxServiceWin.obj
+         Debug.win32\PlayerFileDialogServiceWin.obj
+         Debug.win32\PlayerMenuServiceWin.obj
+         Debug.win32\PlayerMessageBoxServiceWin.obj
+         Debug.win32\PlayerTaskServiceWin.obj
+         Debug.win32\PlayerWin.obj
+         Debug.win32\ProjectConfig.obj
+         Debug.win32\SimulatorConfig.obj
+         Debug.win32\AppEvent.obj
+         Debug.win32\AppLang.obj
+         Debug.win32\PlayerMenuServiceProtocol.obj
+         Debug.win32\PlayerProtocol.obj
+         Debug.win32\PlayerServiceProtocol.obj
+         Debug.win32\PlayerSettings.obj
+         Debug.win32\PlayerTaskServiceProtocol.obj
+         Debug.win32\PlayerUtils.obj
+         Debug.win32\extension_set.obj
+         Debug.win32\generated_message_util.obj
+         Debug.win32\coded_stream.obj
+         Debug.win32\zero_copy_stream.obj
+         Debug.win32\zero_copy_stream_impl_lite.obj
+         Debug.win32\message_lite.obj
+         Debug.win32\repeated_field.obj
+         Debug.win32\atomicops_internals_x86_gcc.obj
+         Debug.win32\atomicops_internals_x86_msvc.obj
+         Debug.win32\common.obj
+         Debug.win32\once.obj
+         Debug.win32\stringprintf.obj
+         Debug.win32\wire_format_lite.obj
+         Debug.win32\ConfigParser.obj
+         Debug.win32\ConnectWaitLayer.obj
+         Debug.win32\ConsoleCommand.obj
+         Debug.win32\FileServer.obj
+         Debug.win32\Landscape_png.obj
+         Debug.win32\PlayDisable_png.obj
+         Debug.win32\PlayEnable_png.obj
+         Debug.win32\Portrait_png.obj
+         Debug.win32\Protos.pb.obj
+         Debug.win32\Runtime.obj
+         Debug.win32\RuntimeCCSImpl.obj
+         Debug.win32\RuntimeProtocol.obj
+         Debug.win32\Shine_png.obj
+         Debug.win32\VisibleRect.obj
+         Debug.win32\Runtime_win32.obj
+         Debug.win32\stdafx.obj
+     1>PlayDisable_png.obj : warning LNK4221: 此对象文件未定义任何之前未定义的公共符号，因此任何耗用此库的链接操作都不会使用此文件
+     1>atomicops_internals_x86_gcc.obj : warning LNK4221: 此对象文件未定义任何之前未定义的公共符号，因此任何耗用此库的链接操作都不会使用此文件
+     1>PlayerUtils.obj : warning LNK4221: 此对象文件未定义任何之前未定义的公共符号，因此任何耗用此库的链接操作都不会使用此文件
+     1>PlayerSettings.obj : warning LNK4221: 此对象文件未定义任何之前未定义的公共符号，因此任何耗用此库的链接操作都不会使用此文件
+     1>PlayerServiceProtocol.obj : warning LNK4221: 此对象文件未定义任何之前未定义的公共符号，因此任何耗用此库的链接操作都不会使用此文件
+         libsimulator.vcxproj -> E:\work\sanguo_mobile2\frameworks\runtime-src\proj.win32\Debug.win32\libsimulator.lib
+     1>已完成生成项目“E:\work\sanguo_mobile2\frameworks\cocos2d-x\tools\simulator\libsimulator\proj.win32\libsimulator.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:09:40.51

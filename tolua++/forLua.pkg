@@ -1,0 +1,22 @@
+$#include "tolua_fix.h"
+$#include <map>
+$#include <string>
+$#include <list>
+$#include <vector>
+$#include "cocos2d.h"
+$#include "CCLuaEngine.h"
+$#include "SimpleAudioEngine.h"
+$#include "cocos-ext.h"
+
+$using namespace cocos2d;
+$using namespace cocos2d::extension;
+$using namespace CocosDenshion;
+
+$#include "luaBindFunction.h"
+$#include "cToolsForLua.h"
+$#include "../httpNet/httpNet.h"
+
+
+$pfile "luaBindFunction.pkg"
+$pfile "cToolsForLua.pkg"
+$pfile "httpNet.pkg"

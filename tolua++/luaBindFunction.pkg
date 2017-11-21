@@ -1,0 +1,14 @@
+class luaBindFunction
+{
+	static luaBindFunction * getInstance();
+	static void destroyInstance();
+
+	void binLuaFunction(LUA_FUNCTION funcID, const char * funName);
+
+	void removeLuaFunction(const char * funName);
+
+	void removeAllLuaFunction();
+
+	//failed return DEF_FUNCTION_NIL
+	int getLuaFunction(const char * funName);
+};

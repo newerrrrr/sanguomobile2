@@ -1,0 +1,18 @@
+info face="中山行书百年纪念版" size=58 bold=1 italic=0 charset="" unicode=1 stretchH=100 smooth=1 aa=1 padding=7,7,7,7 spacing=10,10 outline=0
+common lineHeight=58 base=46 scaleW=512 scaleH=256 pages=1 packed=0 alphaChnl=1 redChnl=0 greenChnl=0 blueChnl=0
+page id=0 file="chn_kill_num_0.png"
+chars count=14
+char id=32   x=85    y=164   width=44    height=72    xoffset=-7    yoffset=-7    xadvance=30    page=0  chnl=15
+char id=19968 x=0     y=0     width=75    height=72    xoffset=-7    yoffset=-7    xadvance=61    page=0  chnl=15
+char id=19971 x=85    y=0     width=75    height=72    xoffset=-7    yoffset=-7    xadvance=61    page=0  chnl=15
+char id=19977 x=170   y=0     width=75    height=72    xoffset=-7    yoffset=-7    xadvance=61    page=0  chnl=15
+char id=20061 x=255   y=0     width=75    height=72    xoffset=-7    yoffset=-7    xadvance=61    page=0  chnl=15
+char id=20108 x=340   y=0     width=75    height=72    xoffset=-7    yoffset=-7    xadvance=61    page=0  chnl=15
+char id=20116 x=425   y=0     width=75    height=72    xoffset=-7    yoffset=-7    xadvance=61    page=0  chnl=15
+char id=20843 x=0     y=82    width=75    height=72    xoffset=-7    yoffset=-7    xadvance=61    page=0  chnl=15
+char id=20845 x=85    y=82    width=75    height=72    xoffset=-7    yoffset=-7    xadvance=61    page=0  chnl=15
+char id=21313 x=170   y=82    width=75    height=72    xoffset=-7    yoffset=-7    xadvance=61    page=0  chnl=15
+char id=22235 x=255   y=82    width=75    height=72    xoffset=-7    yoffset=-7    xadvance=61    page=0  chnl=15
+char id=30772 x=340   y=82    width=75    height=72    xoffset=-7    yoffset=-7    xadvance=61    page=0  chnl=15
+char id=36830 x=425   y=82    width=75    height=72    xoffset=-7    yoffset=-7    xadvance=61    page=0  chnl=15
+char id=39318 x=0     y=164   width=75    height=72    xoffset=-7    yoffset=-7    xadvance=61    page=0  chnl=15

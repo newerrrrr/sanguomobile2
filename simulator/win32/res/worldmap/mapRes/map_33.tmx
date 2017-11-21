@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="isometric" renderorder="right-down" width="12" height="12" tilewidth="256" tileheight="128" nextobjectid="1">
+ <tileset firstgid="1" name="Component" tilewidth="256" tileheight="128" tilecount="128">
+  <image source="Component.png" width="2048" height="2048"/>
+ </tileset>
+ <imagelayer name="image1" x="-1" y="383">
+  <image source="image_3.png"/>
+ </imagelayer>
+ <imagelayer name=" image2" x="767" y="-1">
+  <image source="image_3.png"/>
+ </imagelayer>
+ <imagelayer name=" image3" x="1535" y="383">
+  <image source="image_3.png"/>
+ </imagelayer>
+ <imagelayer name="image4" x="767" y="767">
+  <image source="image_3.png"/>
+ </imagelayer>
+ <layer name="layer_2" width="12" height="12">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4B8AAACQAAB
+  </data>
+ </layer>
+ <layer name="layer_1" width="12" height="12">
+  <data encoding="base64" compression="zlib">
+   eJxrYGBgaABifiiNDbMRKQbDyGZxALEAlCbFfHwYn1uHu/nI4YmPJsV8SjAANls9CA==
+  </data>
+ </layer>
+ <layer name="layer_mid1" width="12" height="12">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4B8AAACQAAB
+  </data>
+ </layer>
+ <layer name="layer_top" width="12" height="12">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4B8AAACQAAB
+  </data>
+ </layer>
+</map>

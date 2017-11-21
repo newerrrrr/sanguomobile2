@@ -1,0 +1,233 @@
+
+--神龛武将升级UI
+
+local GodGeneralLevelUp = {}
+setmetatable(GodGeneralLevelUp,{__index = _G})
+setfenv(1, GodGeneralLevelUp)
+
+local GodGeneralMode = require("game.uilayer.godGeneral.GodGeneralMode"):instance()
+
+local widgetUI
+local scheduler 
+local materials = {}
+local materialsExp = {}
+local touchTimer 
+
+
+--初始化UI,进入神龛界面只执行一次，比如注册按钮点击事件
+function initUI(widget)
+  if nil == widget then return end 
+
+  widgetUI = widget 
+  local node = widgetUI:getChildByName("Panel_dj")
+  node:getChildByName("text_dj1"):setString(g_tr("level"))
+
+  local lbTips = node:getChildByName("Text_nr1") 
+  local str = g_tr("godGenTouchToLvUp") 
+  lbTips:setString(str)
+  g_gameTools.createRichText(lbTips, str) 
+
+  --道具列表
+  local btnLeft = node:getChildByName("Image_j1")
+  local btnRight = node:getChildByName("Image_j2") 
+
+  btnLeft:addClickEventListener(onClickLeft)
+  btnRight:addClickEventListener(onClickRight)
+
+
+  local listView = node:getChildByName("ListView_1") 
+  listView:removeAllChildren() 
+
+  local function updateIconAndExp()
+    print("updateIconAndExp")
+    if nil == widgetUI then return end 
+
+  end 
+
+  -- local function onSelectItem(sender, eventType)
+  --   print("onSelectItem")
+  --   if eventType == ccui.ListViewEventType.ONSELECTEDITEM_START then 
+  --     print("----touch bengin")  
+
+  --     -- if touchTimer then 
+  --     --   self:unschedule(touchTimer)
+  --     -- end 
+
+  --     -- local function delayCheckLongPress()
+  --     --   print("delayCheckLongPress")
+  --     --   if nil == widgetUI then return end 
+
+  --     --   if touchTimer then 
+  --     --     self:unschedule(touchTimer)
+  --     --   end  
+  --     --   touchTimer = self:schedule(updateIconAndExp, 0.6) 
+  --     -- end 
+  --     -- touchTimer = self:schedule(delayCheckLongPress, 1.5) 
+
+  --   elseif eventType == ccui.ListViewEventType.ONSELECTEDITEM_END then
+  --     print("----touch end")
+  --     -- if touchTimer then 
+  --     --   self:unschedule(touchTimer)
+  --     --   touchTimer = nil 
+  --     -- end 
+
+
+  --   end 
+  -- end
+
+  local function onScrollViewEvent(sender, eventType) 
+    if eventType == ccui.ScrollviewEventType.scrolling then
+      print("----moving")
+    end 
+  end 
+
+  listView:setTouchEnabled(true)
+  listView:addScrollViewEventListener(onScrollViewEvent) 
+  -- listView:addEventListener(onSelectItem) 
+end 
+
+function deInitUI()
+  widgetUI = nil 
+end 
+
+function loadList(data)
+  if nil == widgetUI then return end 
+
+  --材料及其对应经验
+  materials = {}
+  materialsExp = {} 
+  for _,config in pairs(g_data.item) do
+    if tonumber(config.item_original_id) == tonumber(g_Consts.UseItemType.GodGenerralExp) then
+      table.insert( materials, config )
+
+      local dropId = g_data.item[tonumber( config.id )].drop[1]
+      local dropConfig = g_data.drop[ tonumber(dropId) ].drop_data[1]
+      materialsExp[config.id] = dropConfig[3]
+    end 
+  end
+
+  table.sort(materials,function (a,b)
+    return  a.priority <  b.priority
+  end)
+
+  local function touchItemListener(sender,eventType)
+    if eventType == ccui.TouchEventType.began then 
+      print("===touch begin")
+
+    elseif eventType == ccui.TouchEventType.ended then
+      print("===touch end")
+    end
+  end
+
+  --加载列表
+  local listView = widgetUI:getChildByName("Panel_dj"):getChildByName("ListView_1") 
+  listView:removeAllChildren()
+  listView:setScrollBarEnabled(false)
+  listView:setItemsMargin(5)
+  listView:setSwallowTouches(false) 
+  
+  for k, v in pairs(materials) do 
+    local count = 100--g_BagMode.findItemNumberById(v.id) 
+    local icon = require("game.uilayer.common.DropItemView").new(g_Consts.DropType.Props, v.id, count)
+    if icon then 
+      icon:setNameVisible(true)
+      icon:setScale(listView:getContentSize().height/icon:getContentSize().height)
+
+      icon:setTouchEnabled(true)
+      icon:addTouchEventListener(touchItemListener)
+      listView:pushBackCustomItem(icon)      
+    end 
+
+  end 
+end 
+
+function updateInfo(data)
+
+  if nil == widgetUI or nil == data then return end 
+
+  local nodeLv = widgetUI:getChildByName("Panel_dj")
+
+
+  --1.等级
+  nodeLv:getChildByName("Text_dj2"):setString(data.ndata and (""..data.ndata.lv) or "")
+
+  if data.ndata then 
+    local cfg1 = g_data.general_exp[data.ndata.lv]
+    local cfg2 = g_data.general_exp[data.ndata.lv+1]
+    local percent = 100 
+    if cfg2 then 
+      percent = 100* (data.ndata.exp - cfg1.general_exp)/(cfg2.general_exp - cfg1.general_exp)
+    end 
+    nodeLv:getChildByName("LoadingBar_1"):setPercent(percent)
+    nodeLv:getChildByName("Text_bfb1"):setString(string.format("%d%%", percent))
+  end 
+
+  --2.
+  loadList(data) 
+
+  --3.基础属性
+  --获取武将属性(基础属性 + 装备属性)
+  local function dispGenAttr(genData, baseInfo, index, label1, label2)
+    local baseAttr = {0, 0, 0, 0, 0}
+    local equipAttr = {0, 0, 0, 0, 0}
+
+    if genData then 
+      if baseInfo then 
+        baseAttr = {baseInfo.general_force, baseInfo.general_intelligence, baseInfo.general_political, baseInfo.general_governing, baseInfo.general_charm} 
+        --神武将升星附加属性
+        local godAttrExt = {genData.force_rate, genData.intelligence_rate, genData.political_rate, genData.governing_rate, genData.charm_rate}
+        if godAttrExt[index] then 
+          baseAttr[index] = baseAttr[index] + math.max(0, genData.lv - 1)*godAttrExt[index]
+        end 
+
+        local equipId = {genData.weapon_id, genData.armor_id, genData.horse_id, genData.zuoji_id}
+        local item 
+        for k, id in pairs(equipId) do 
+          if id > 0 then 
+            item  = g_data.equipment[id]
+            if item then 
+              equipAttr[1]= equipAttr[1] + item.force 
+              equipAttr[2]= equipAttr[2] + item.intelligence 
+              equipAttr[3]= equipAttr[3] + item.political 
+              equipAttr[4]= equipAttr[4] + item.governing 
+              equipAttr[5]= equipAttr[5] + item.charm 
+            else 
+              print("invalid equipment:", id) 
+            end 
+          end 
+        end 
+      end 
+    end 
+
+    label1:setString(""..baseAttr[index]) 
+    label2:setString("+"..equipAttr[index]) 
+    label2:setPositionX(label1:getPositionX()+label1:getContentSize().width+2) 
+  end 
+
+  local strTitle = {g_tr("wu"), g_tr("zhi"), g_tr("zheng"), g_tr("tong"), g_tr("mei")}
+  local strTips = {g_tr("wuInfo"), g_tr("zhiInfo"), g_tr("zhengInfo"), g_tr("tongInfo"), g_tr("meiInfo")}
+  local tmp 
+  for i=1, 5 do 
+    tmp = widgetUI:getChildByName(string.format("Panel_0%d", i))
+    tmp:getChildByName("Text_01"):setString(strTitle[i])
+    g_itemTips.tipStr(tmp:getChildByName("Image_1"), strTitle[i], strTips[i])
+    
+    dispGenAttr(data.ndata, data.cdata, i, tmp:getChildByName("Text_1"), tmp:getChildByName("Text_2"))
+  end 
+end 
+
+function onClickLeft()
+  print("onClickLeft") 
+  if nil == widgetUI then return end 
+
+end 
+
+function onClickRight()
+  print("onClickRight") 
+  if nil == widgetUI then return end 
+
+end 
+
+
+return GodGeneralLevelUp 
+

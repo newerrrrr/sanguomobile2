@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<AnimationProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectDir>E:\项目合集\手机三国 2\COCOS文件\化神界面\武将化神\Effect_WuJiangHuaShenMask\Export\Effect_WuJiangHuaShenMask</ProjectDir>
+  <Version>1.6.0.0</Version>
+  <Resources>E:\项目合集\手机三国 2\COCOS文件\化神界面\武将化神\Effect_WuJiangHuaShenMask\Export\Effect_WuJiangHuaShenMask\Resources</Resources>
+  <Name>Effect_WuJiangHuaShenMask</Name>
+  <JsonFileName>Effect_WuJiangHuaShenMask.json</JsonFileName>
+  <JsonFolder>E:\项目合集\手机三国 2\COCOS文件\化神界面\武将化神\Effect_WuJiangHuaShenMask\Export\Effect_WuJiangHuaShenMask\Json</JsonFolder>
+  <JsonList />
+  <CanvasSize>
+    <Width>0</Width>
+    <Height>0</Height>
+  </CanvasSize>
+  <filePath>E:\项目合集\手机三国 2\COCOS文件\化神界面\武将化神\Effect_WuJiangHuaShenMask\Export\Effect_WuJiangHuaShenMask\Effect_WuJiangHuaShenMask.xml.ANI</filePath>
+  <ProjectType>AnimationProject</ProjectType>
+  <ResRelativePath />
+  <ResourceFileList />
+  <bBatchImage>false</bBatchImage>
+</AnimationProject>

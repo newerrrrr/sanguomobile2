@@ -1,0 +1,188 @@
+local CitySign = class("CitySign",require("game.uilayer.base.BaseLayer"))
+local CityBattleMode = require("game.uilayer.cityBattle.CityBattleMode"):GetInstance()
+
+
+function CitySign:ctor(cityId,overTime)
+    CitySign.super.ctor(self)
+    self.cityId = cityId
+    self.overTime = overTime
+    self.campId = g_PlayerMode.GetData().camp_id
+    self.nData = nil
+end
+
+function CitySign:onEnter()
+    local function onRecv(result,msgData)
+        g_busyTip.hide_1()
+        if true == result then
+            self.nData = clone( msgData[tostring(self.campId)] )
+            dump(self.nData)
+            if self.nData then
+                self:_InitUI()
+            else
+                self:close()
+            end
+        else
+            self:close()
+        end
+    end
+    g_busyTip.show_1()
+    g_sgHttp.postData("city_battle/getSignInfo", { cityId = self.cityId ,campId = self.campId }, onRecv, true)
+end
+
+function CitySign:_InitUI()
+    self.layer = self:loadUI("CityBattle_popup01.csb")
+    self.root = self.layer:getChildByName("scale_node")
+    local closeBtn = self.root:getChildByName("close_btn")
+    closeBtn:addClickEventListener( function ( sender )
+        g_musicManager.playEffect(g_SOUNDS_CANCLE_PATH)
+        self:close()
+    end)
+
+    --阵容修改按钮
+    local btnChangeTeam = self.root:getChildByName("Image_24") 
+    btnChangeTeam:getChildByName("Text_21"):setString(g_tr("myTeam"))
+    btnChangeTeam:addClickEventListener( function ( sender )
+        g_musicManager.playEffect(g_SOUNDS_SURE_PATH)
+
+        g_sceneManager.addNodeForUI(require("game.uilayer.activity.crossServer.FormationView").new(1))
+    end)
+
+    self.list = self.root:getChildByName("ListView_1")
+    self:_LoadList()
+end
+
+function CitySign:_LoadList()
+    local nodeMode = cc.CSLoader:createNode("CityBattle_popup01_list1.csb")
+    local str = 
+    {
+        g_tr("city_battle_zhuhou"),
+        g_tr("city_battle_lingjian"),
+        g_tr("city_battle_putong"),
+    }
+
+    local pic = 
+    {
+        g_resManager.getResPath(1031102),
+        g_resManager.getResPath(1031095),
+        g_resManager.getResPath(1031053),
+    }
+
+    self.timeTxs = {}
+
+    for i = 1, 3 do
+        local panel = nodeMode:getChildByName( string.format("Panel_%d",i) )
+        if panel then
+            panel:getChildByName("Text_gm1"):setString( str[i] )
+            local signBtn = panel:getChildByName("Button_1")
+            signBtn:getChildByName("Text_y1_0"):setString( str[i] .. g_tr("city_battle_sign") )
+            signBtn.index = i
+            signBtn:addClickEventListener(handler(self,self[string.format("_TouchSign%d",i)]))
+            panel:getChildByName("Panel_renw"):getChildByName("Image_3"):loadTexture(pic[i])
+            --panel:getChildByName("Text_nn1"):setString()
+            --panel:getChildByName("Text_nn2")
+            table.insert( self.timeTxs,panel:getChildByName("Text_nn2"))
+        end
+    end
+    self.list:pushBackCustomItem(nodeMode)
+    self:_UpdateTime()
+    if self.timer == nil then
+        self.timer = self:schedule(handler(self,self._UpdateTime),1)
+    end
+
+end
+
+function CitySign:_Sign(index)
+    local function onRecv(result,msgData)
+        g_busyTip.hide_1()
+        if result == true then
+            --dump(msgData)
+            g_airBox.show(g_tr("signSucc"))
+        end
+    end
+    g_busyTip.show_1()
+    g_sgHttp.postData("city_battle/signCityBattle", { cityId = self.cityId , signType = index }, onRecv, true)
+end
+
+
+function CitySign:_TouchSign1(sender)
+    local singInfo = CityBattleMode:GetPrepareInfo()
+    if singInfo.status == g_Consts.CityBattleStatus.SIGN_FIRST or singInfo.status == g_Consts.CityBattleStatus.SIGN_NORMAL then
+        self:_Sign(sender.index)
+    else
+        if singInfo.status == g_Consts.CityBattleStatus.NOT_START then
+            g_airBox.show(g_tr("city_battle_sign") .. g_tr("city_battle_sign_noopen") )
+        else
+            g_airBox.show(g_tr("city_battle_sign") .. g_tr("zhuanpanOver") )
+        end
+    end
+end
+
+function CitySign:_TouchSign2(sender)
+    local singInfo = CityBattleMode:GetPrepareInfo()
+    if singInfo.status == g_Consts.CityBattleStatus.SIGN_NORMAL then
+        self:_Sign(sender.index)
+    else
+        if singInfo.status == g_Consts.CityBattleStatus.NOT_START then
+            g_airBox.show(g_tr("city_battle_sign") .. g_tr("city_battle_sign_noopen") )
+        else
+            g_airBox.show(g_tr("city_battle_sign") .. g_tr("zhuanpanOver") )
+        end
+    end
+end
+
+function CitySign:_TouchSign3(sender)
+    local singInfo = CityBattleMode:GetPrepareInfo()
+    if singInfo.status == g_Consts.CityBattleStatus.SIGN_NORMAL then
+        self:_Sign(sender.index)
+    else
+        if singInfo.status == g_Consts.CityBattleStatus.NOT_START then
+            g_airBox.show(g_tr("city_battle_sign") .. g_tr("city_battle_sign_noopen") )
+        else
+            g_airBox.show(g_tr("city_battle_sign") .. g_tr("zhuanpanOver") )
+        end
+    end
+end
+
+function CitySign:_UpdateTime()
+    self.overTime = self.overTime - 1
+    local singInfo = CityBattleMode:GetPrepareInfo()
+    if singInfo.status == g_Consts.CityBattleStatus.SIGN_FIRST then
+        for index, var in ipairs(self.timeTxs) do
+            if index == 1 then
+                var:setString( g_tr("leftTime") .. g_gameTools.convertSecondToString(self.overTime))
+            else
+                var:setString( g_tr("leftTime") .. g_tr("city_battle_sign_noopen"))
+            end
+        end
+    elseif singInfo.status == g_Consts.CityBattleStatus.SIGN_NORMAL then
+        for _, var in ipairs(self.timeTxs) do
+            var:setString( g_tr("leftTime") .. g_gameTools.convertSecondToString(self.overTime))
+        end
+    else
+        for _, var in ipairs(self.timeTxs) do
+            if singInfo.status == g_Consts.CityBattleStatus.NOT_START then
+                var:setString( g_tr("leftTime") .. g_tr("city_battle_sign_noopen"))
+            else
+                var:setString( g_tr("leftTime") .. g_tr("city_battle_sign") .. g_tr("zhuanpanOver") )
+            end
+        end
+    end
+    if self.overTime <= 0 then
+        self.overTime = 0
+        if self.timer then
+            self:unschedule(self.timer)
+            self.timer = nil
+            require("game.uilayer.cityBattle.CityShow").UpdateTimeTx()
+            self:_UpdateTime()
+        end
+    end
+end
+
+function CitySign:onExit()
+    if self.timer then
+        self:unschedule(self.timer)
+    end
+    self.timer = nil
+end
+
+return CitySign

@@ -1,0 +1,36 @@
+local Marching_troops_menuConfig = {
+	{
+		id = 1,
+		build_menu_1 = {133},
+		build_menu_2 = {133,137,157},
+		build_menu_3 = {},
+		build_menu_4 = {},
+		build_menu_5 = {},
+		build_menu_6 = {},
+		build_menu_7 = {},
+		build_menu_8 = {},
+		build_menu_9 = {},
+		build_menu_10 = {},
+		build_menu_11 = {},
+		build_menu_12 = {},
+		build_menu_13 = {},
+	},
+	{
+		id = 2,
+		build_menu_1 = {134,136,135},
+		build_menu_2 = {134,136},
+		build_menu_3 = {135,136},
+		build_menu_4 = {},
+		build_menu_5 = {134,136,153},
+		build_menu_6 = {153},
+		build_menu_7 = {134,136,153},
+		build_menu_8 = {135},
+		build_menu_9 = {136},
+		build_menu_10 = {134,136},
+		build_menu_11 = {134,136},
+		build_menu_12 = {134,136},
+		build_menu_13 = {136},
+	},
+
+}
+return Marching_troops_menuConfig

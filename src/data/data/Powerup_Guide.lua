@@ -1,0 +1,68 @@
+local Powerup_GuideConfig = {
+	{
+		id = 1,
+		name_id = 330001,
+		desc_id = 331001,
+		redirect_type = {11},
+		button_name_id = {340011},
+		castle_lv = {1},
+	},
+	{
+		id = 2,
+		name_id = 330002,
+		desc_id = 331002,
+		redirect_type = {1,2,3,4},
+		button_name_id = {340001,340002,340003,340004},
+		castle_lv = {1,1,2,5},
+	},
+	{
+		id = 3,
+		name_id = 330003,
+		desc_id = 331003,
+		redirect_type = {6,12},
+		button_name_id = {340006,340012},
+		castle_lv = {1,1},
+	},
+	{
+		id = 4,
+		name_id = 330004,
+		desc_id = 331004,
+		redirect_type = {9,12,13},
+		button_name_id = {340009,340012,340013},
+		castle_lv = {1,1,1},
+	},
+	{
+		id = 5,
+		name_id = 330006,
+		desc_id = 331006,
+		redirect_type = {7,12},
+		button_name_id = {340007,340012},
+		castle_lv = {3,1},
+	},
+	{
+		id = 6,
+		name_id = 330007,
+		desc_id = 331007,
+		redirect_type = {8},
+		button_name_id = {340008},
+		castle_lv = {4},
+	},
+	{
+		id = 7,
+		name_id = 330008,
+		desc_id = 331008,
+		redirect_type = {5},
+		button_name_id = {340005},
+		castle_lv = {4},
+	},
+	{
+		id = 8,
+		name_id = 330009,
+		desc_id = 331009,
+		redirect_type = {14,15},
+		button_name_id = {340014,340015},
+		castle_lv = {8,8},
+	},
+
+}
+return Powerup_GuideConfig

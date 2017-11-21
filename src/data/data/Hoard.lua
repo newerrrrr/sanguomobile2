@@ -1,0 +1,4 @@
+local HoardConfig = {
+
+}
+return HoardConfig
